@@ -1,0 +1,39 @@
+
+$fa-font-path: "~font-awesome/fonts/";
+
+// --------------------------------------------------------------------------------------------------
+
+// @import "./preBootstrapCustomizations.scss";
+
+// --------------------------------------------------------------------------------------------------
+
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+
+// @import "~bootstrap/scss/_reboot.scss";
+// @import "~bootstrap/scss/_type.scss";
+// @import "~bootstrap/scss/_images.scss";
+// @import "~bootstrap/scss/_code.scss";
+// @import "~bootstrap/scss/_grid.scss";
+
+// --------------------------------------------------------------------------------------------------
+
+//@import "./bootstrapCustomizations.scss";
+
+// --------------------------------------------------------------------------------------------------
+
+@import "./bootstrap.scss";
+// @import "~bootstrap/scss/bootstrap.scss";
+
+// --------------------------------------------------------------------------------------------------
+
+@import "~font-awesome/scss/font-awesome.scss";
+
+// --------------------------------------------------------------------------------------------------
+
+@import "../mixins/mixins.scss";
+
+// --------------------------------------------------------------------------------------------------
+
+//@import "../app/app.scss";
