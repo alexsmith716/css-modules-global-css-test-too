@@ -2,6 +2,7 @@
   "name": "css-modules-global-css-test-too",
   "version": "0.0.1",
   "description": "css-modules-global-css-test-too",
+  "main": "index.js",
   "author": "dev",
   "license": "MIT",
   "scripts": {

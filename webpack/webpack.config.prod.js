@@ -1,9 +1,9 @@
 const webpack = require('webpack');
-const path = require("path");
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const rootPath = path.resolve(__dirname, '..');
 
 module.exports = {
@@ -15,8 +15,9 @@ module.exports = {
   entry: {
     main: [
       'babel-polyfill',
-      './src/assets/scss/global/global.scss',
-      './src/index.js',
+      // path.join(rootPath, './src/assets/scss/bootstrap/theme.scss'),
+      path.join(rootPath, './src/assets/scss/global/global.scss'),
+      path.join(rootPath, './src/index.js')
     ],
     vendor: [
       'react',
@@ -39,32 +40,53 @@ module.exports = {
     chunkFilename: '[name].[chunkhash].js',
   },
 
+  // optimization: {
+  //   splitChunks: {
+  //     automaticNameDelimiter: "-",
+  //     chunks: 'all',
+  //     minSize: 0,
+  //   },
+  // },
+
   optimization: {
     splitChunks: {
-      automaticNameDelimiter: "-",
-      chunks: 'all',
-      minSize: 0,
-    },
-    occurrenceOrder: true,
-    // minimize: true,
-    // minimizer: [
-    //   new UglifyJsPlugin({
-    //     sourceMap: true,
-    //     uglifyOptions: {
-    //       compress: {
-    //         warnings: true,
-    //         drop_console: true,
-    //       },
-    //       mangle: false,
-    //       output: {
-    //         beautify: true,
-    //         comments: false
-    //       },
-    //       warnings: true
-    //     }
-    //   })
-    // ]
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
   },
+
+  // optimization: {
+  //   splitChunks: {
+  //     automaticNameDelimiter: "-",
+  //     chunks: 'all',
+  //     minSize: 0,
+  //   },
+  //   occurrenceOrder: true,
+  //   // minimize: true,
+  //   // minimizer: [
+  //   //   new UglifyJsPlugin({
+  //   //     sourceMap: true,
+  //   //     uglifyOptions: {
+  //   //       compress: {
+  //   //         warnings: true,
+  //   //         drop_console: true,
+  //   //       },
+  //   //       mangle: false,
+  //   //       output: {
+  //   //         beautify: true,
+  //   //         comments: false
+  //   //       },
+  //   //       warnings: true
+  //   //     }
+  //   //   })
+  //   // ]
+  // },
 
   module: {
 
@@ -120,13 +142,16 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
+              includePaths: [
+                path.join(__dirname, '../node_modules'),
+              ],
             }
           },
           {
             loader: 'sass-resources-loader',
             options: {
               resources: [
-                path.resolve(rootPath, './src/assets/scss/mixins/mixins.scss'),
+                path.join(__dirname, '../src/assets/scss/mixins/mixins.scss'),
               ],
             },
           },
@@ -139,15 +164,15 @@ module.exports = {
       //     loader: 'style-loader'
       //   },
       //   {
-      //     loader : 'css-loader',
+      //     loader: 'css-loader',
       //     options:
       //     {
-      //       importLoaders : 1,
-      //       sourceMap     : true
+      //       importLoaders: 1,
+      //       sourceMap: true
       //     }
       //   },
       //   {
-      //     loader : 'postcss-loader'
+      //     loader: 'postcss-loader'
       //   }]
       // },
       {
@@ -201,7 +226,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx',],
+    extensions: ['.js', '.jsx', '.scss', '.css',],
     modules: [ 'src', 'node_modules', ],
   },
 
@@ -220,7 +245,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: path.join(rootPath, './src/index.html'),
       hash: false,
       filename: 'index.html',
       inject: 'body'
