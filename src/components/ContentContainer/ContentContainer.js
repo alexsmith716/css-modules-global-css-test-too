@@ -1,6 +1,19 @@
 import React from 'react';
 
-import styles from './ContentContainer2.scss';
+import styles from './ContentContainer.scss';
+
+// <header class="intro">
+//   <div class="intro-body">
+//     <div class="container">
+//       <h1 class="intro-heading">Election App 2017</h1>                
+//       <h2>The 2016 presidential election is here!</h2>                
+//       <p class="intro-text"><b>Who do you support and what are your comments? Join the conversation.</b></p>                
+//       <p><a class="btn btn-primary btn-lg" href="#" role="button">Sign Up Now &raquo;</a></p>
+//     </div>
+//   </div>
+// </header>
+
+// <h1 className="display-3">Midtern Election App 2018</h1>
 
 export default class ContentContainer extends React.Component {
 
@@ -11,12 +24,24 @@ export default class ContentContainer extends React.Component {
     <div>
       <main role="main">
 
-        <div className={`jumbotron ${styles.masthead} d-flex`}>
-          <div className="container">
-            <h1 className="display-3">Isomorphic App!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        <div className={`jumbotron ${styles.masthead}`}>
+
+          <div className={styles.introBody}>
+
+            <div className="container">
+
+              <h1 className="colorPurple">Midtern Election App 2018</h1>
+
+              <h2 className={styles.introHeadingSub}>The midterms are almost here!</h2> 
+
+              <p className={styles.introText}><b>Who do you support and what are your comments?<br/>Join the conversation.</b></p> 
+
+              <p><a className="btn btn-primary btn-lg" href="#" role="button">Sign Up Now &raquo;</a></p>
+
+            </div>
+
           </div>
+
         </div>
 
         <div className="container">

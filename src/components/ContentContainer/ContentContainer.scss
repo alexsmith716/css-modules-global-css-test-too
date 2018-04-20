@@ -1,34 +1,58 @@
-.colorMarginStyle {
-  margin-top: 30px;
-  color: #5c6ac4;
-  border: 3px solid #5c6ac4;
-}
+.masthead {
+  background-color:#eeeeee;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url('./img/splashImage-2048x719.jpg');
+  background-repeat: no-repeat;
+  height:480px; 
+  border-radius: 0 !important;
+  @include background-cover;
 
-.colorGold {
-  color: #FFD700;
-}
+  .introBody {
+    color:FFD700;
+    @include tester-font;
 
-.coloredText1 {
-  color: #009900;
-}
+    .container {
+      padding-top: 60;
+      max-width:100%;
 
-.coloredText2 {
-  color: #999000;
-}
+      .introHeading {
+        @include colorDodgerblue;
+        @include tester-font3;
+      }
 
-.coloredText3 {
-  font-size: 20px;
-  color: #00CD00;
-}
+      .introHeadingSub {
+        color:00F5FF;
+      }
 
-.colorPurple {
-  color: #9B30FF;
-}
+      .introText {
+        margin-bottom:15px;
+        font-size:21px;
+        font-weight:200;
+      }
+    }
+  }
 
-.colorOlive {
-  color: #808000;
-}
+  @media (min-width:768px){
 
-.colorCrimson {
-  color: #DC143C;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    padding-right: 60px;
+    padding-left: 60px;
+
+    h1 {
+      font-size: 63px;
+    }
+
+  }
+
+  @media (max-width:768px){
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-position-x:34%;
+    height:420px;
+
+  }
 }
