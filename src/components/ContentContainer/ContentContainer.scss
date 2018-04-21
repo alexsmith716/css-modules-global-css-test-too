@@ -4,31 +4,33 @@
   padding-bottom: 50px;
   background-image: url('./img/splashImage-2048x719.jpg');
   background-repeat: no-repeat;
+  background-position: center center;
   height:480px; 
   border-radius: 0 !important;
   @include background-cover;
 
   .introBody {
-    color:FFD700;
+    @include colorDarkorange;
     @include tester-font;
 
-    .container {
+    .introCont {
       padding-top: 60;
       max-width:100%;
 
       .introHeading {
-        @include colorDodgerblue;
+        @include colorPurple;
         @include tester-font3;
       }
 
       .introHeadingSub {
-        color:00F5FF;
+        @include colorCrimson;
       }
 
       .introText {
         margin-bottom:15px;
         font-size:21px;
         font-weight:200;
+        @include tester-font4;
       }
     }
   }

@@ -1,40 +1,25 @@
 import React from 'react';
-
 import styles from './ContentContainer.scss';
 
-// <header class="intro">
-//   <div class="intro-body">
-//     <div class="container">
-//       <h1 class="intro-heading">Election App 2017</h1>                
-//       <h2>The 2016 presidential election is here!</h2>                
-//       <p class="intro-text"><b>Who do you support and what are your comments? Join the conversation.</b></p>                
-//       <p><a class="btn btn-primary btn-lg" href="#" role="button">Sign Up Now &raquo;</a></p>
-//     </div>
-//   </div>
-// </header>
+const ContentContainer = () => {
 
-// <h1 className="display-3">Midtern Election App 2018</h1>
-
-export default class ContentContainer extends React.Component {
-
-  render () {
-
-    return (
+  return (
 
     <div>
+
       <main role="main">
 
         <div className={`jumbotron ${styles.masthead}`}>
 
           <div className={styles.introBody}>
 
-            <div className="container">
+            <div className={`container ${styles.introCont}`}>
 
-              <h1 className="colorPurple">Midtern Election App 2018</h1>
+              <h1 className={styles.introHeading}>Midtern Election App 2018</h1>
 
               <h2 className={styles.introHeadingSub}>The midterms are almost here!</h2> 
 
-              <p className={styles.introText}><b>Who do you support and what are your comments?<br/>Join the conversation.</b></p> 
+              <p className={styles.introText}><b>What are you and others saying?<br/>... join the conversation.</b></p> 
 
               <p><a className="btn btn-primary btn-lg" href="#" role="button">Sign Up Now &raquo;</a></p>
 
@@ -47,21 +32,25 @@ export default class ContentContainer extends React.Component {
         <div className="container">
 
           <div className="row">
+
             <div className="col-md-4">
               <h2>Heading</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
               <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p>
             </div>
+
             <div className="col-md-4">
               <h2>Heading</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
               <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p>
             </div>
+
             <div className="col-md-4">
               <h2>Heading</h2>
               <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p>
             </div>
+
           </div>
 
           <hr/>
@@ -69,8 +58,10 @@ export default class ContentContainer extends React.Component {
         </div>
 
       </main>
+
     </div>
 
-    )
-  };
+  )
 };
+
+export default ContentContainer;
