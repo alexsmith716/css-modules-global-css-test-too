@@ -30,14 +30,14 @@ module.exports = {
 
   output: {
     // path: __dirname,
-    // filename: '[name].js',
+    filename: '[name].js',
     // publicPath: '/',
     // path: path.resolve(__dirname, '../public/assets'),
     // // the target directory for all output files - absolute path
     // publicPath: '/assets/',
     // // the url to the output directory resolved relative to the HTML page
-    filename: '[name].[hash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    //filename: '[name].[hash].js',
+    //chunkFilename: '[name].[chunkhash].js',
   },
 
   // optimization: {
@@ -48,18 +48,18 @@ module.exports = {
   //   },
   // },
 
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: 'styles',
-          test: /\.css$/,
-          chunks: 'all',
-          enforce: true
-        }
-      }
-    }
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       styles: {
+  //         name: 'styles',
+  //         test: /\.css$/,
+  //         chunks: 'all',
+  //         enforce: true
+  //       }
+  //     }
+  //   }
+  // },
 
   // optimization: {
   //   splitChunks: {
@@ -255,9 +255,9 @@ module.exports = {
     // new webpack.NamedModulesPlugin(),
 
     new MiniCssExtractPlugin({
-      // filename: 'styles.css',
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css'
+      filename: 'styles.css',
+      // filename: '[name].[hash].css',
+      // chunkFilename: '[id].[hash].css'
     }),
 
   ],

@@ -10,14 +10,18 @@
   font-family: 'Playbill', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-@mixin tester-font {
+@mixin tester-font() {
   font-family: 'Phosphate', 'Desdemona', 'Noteworthy', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-@mixin tester-font2 {
+@mixin tester-font2() {
   font-family: 'Desdemona', 'Noteworthy', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-@mixin tester-font3 {
+@mixin tester-font3() {
   font-family: 'Stencil', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@mixin tester-font4() {
+  font-family: 'American Typewriter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
