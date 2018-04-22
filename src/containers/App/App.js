@@ -7,8 +7,6 @@ import AppCss from './AppCss.css';
 
 import iconBar36 from './svg/icon-bar-36.svg';
 
-// <span className={`fa fa-headphones ${AppScss.colorGold}`}>
-
 export class App extends React.Component {
 
   render () {
@@ -30,7 +28,7 @@ export class App extends React.Component {
                 <a className="nav-link" href="#">Link</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#"><span className={AppScss.colorGold}></span><span className={AppScss.colorGold}>Headphones!</span></a>
+                <a className="nav-link" href="#"><span className={`fa fa-headphones ${AppScss.colorGold}`}></span><span className={AppScss.colorGold}>Headphones!</span></a>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>

@@ -15,9 +15,8 @@ module.exports = {
   entry: {
     main: [
       'babel-polyfill',
-      // path.join(rootPath, './src/assets/scss/bootstrap/theme.scss'),
-      path.join(rootPath, './src/assets/scss/global/global.scss'),
-      path.join(rootPath, './src/index.js')
+      './src/assets/scss/global/global2.scss',
+      './src/index.js'
     ],
     vendor: [
       'react',
@@ -30,23 +29,23 @@ module.exports = {
 
   output: {
     // path: __dirname,
-    filename: '[name].js',
+    //filename: '[name].js',
     // publicPath: '/',
     // path: path.resolve(__dirname, '../public/assets'),
     // // the target directory for all output files - absolute path
     // publicPath: '/assets/',
     // // the url to the output directory resolved relative to the HTML page
-    //filename: '[name].[hash].js',
-    //chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[chunkhash].js',
   },
 
-  // optimization: {
-  //   splitChunks: {
-  //     automaticNameDelimiter: "-",
-  //     chunks: 'all',
-  //     minSize: 0,
-  //   },
-  // },
+  optimization: {
+    splitChunks: {
+      automaticNameDelimiter: "-",
+      chunks: 'all',
+      minSize: 0,
+    },
+  },
 
   // optimization: {
   //   splitChunks: {
@@ -102,23 +101,6 @@ module.exports = {
           },
         ],
       },
-      //{
-      //  test: /(global\.css)$/,
-      //  use: [
-      //    {
-      //      loader: 'style-loader'
-      //    },
-      //    {
-      //      loader: 'css-loader',
-      //      options: {
-      //        sourceMap: true
-      //      }
-      //    },
-      //    {
-      //      loader: 'postcss-loader',
-      //    }
-      //  ]
-      //},
       {
         test: /\.(scss|css)$/i,
         use: [
@@ -139,11 +121,17 @@ module.exports = {
             }
           },
           {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap: true,
+            }
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
               includePaths: [
-                path.join(__dirname, '../node_modules'),
+                // path.resolve(rootPath, 'node_modules'),
               ],
             }
           },
@@ -151,30 +139,12 @@ module.exports = {
             loader: 'sass-resources-loader',
             options: {
               resources: [
-                path.join(__dirname, '../src/assets/scss/mixins/mixins.scss'),
+                path.resolve(rootPath, 'src/assets/scss/mixins/mixins.scss'),
               ],
             },
           },
         ]
       },
-      // {
-      //   test: /\.(css)$/,
-      //   use:
-      //   [{
-      //     loader: 'style-loader'
-      //   },
-      //   {
-      //     loader: 'css-loader',
-      //     options:
-      //     {
-      //       importLoaders: 1,
-      //       sourceMap: true
-      //     }
-      //   },
-      //   {
-      //     loader: 'postcss-loader'
-      //   }]
-      // },
       {
         test: /\.(jpg|jpeg|gif|png|svg)$/i,
         use: [{
@@ -255,9 +225,9 @@ module.exports = {
     // new webpack.NamedModulesPlugin(),
 
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
-      // filename: '[name].[hash].css',
-      // chunkFilename: '[id].[hash].css'
+      // filename: 'styles.css',
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css'
     }),
 
   ],
