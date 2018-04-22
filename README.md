@@ -7,15 +7,15 @@ Testing css modules and global scope. Toooo.
 ### Issues:
 Encountered issue apparently caused by nested ":global" switches.
 
-[Appears Error is thrown by [**postcss-modules-local-by-default**](https://github.com/css-modules/postcss-modules-local-by-default/blob/master/index.js#L26).
+Appears Error is thrown by [**postcss-modules-local-by-default**](https://github.com/css-modules/postcss-modules-local-by-default/blob/master/index.js#L26).
 
 
 ### css-modules ":global" mode:
 [**css-modules**](https://github.com/css-modules/css-modules)
 
 
-####:global switches to global scope for the current selector respective identifier. :global(.xxx) respective @keyframes 
-####:global(xxx) declares the stuff in parenthesis in the global scope.
+":global switches to global scope for the current selector respective identifier. :global(.xxx) respective @keyframes"
+":global(xxx) declares the stuff in parenthesis in the global scope."
 
 
 ### Referenced Github Issues:
@@ -29,4 +29,11 @@ Encountered issue apparently caused by nested ":global" switches.
 [**Use bootstrap-sass instead of css #474**](https://github.com/davezuko/react-redux-starter-kit/issues/474)
 
 
+### Suggested Solutions:
 
+1) [**Bootstrap-Loader**](https://github.com/shakacode/bootstrap-loader)
+
+
+### Always Learning:
+
+Hmmm, so [**html-webpack-plugin**](https://github.com/jantimon/html-webpack-plugin) uses [**extract-text-webpack-plugin**](https://github.com/webpack-contrib/extract-text-webpack-plugin) under the hood!

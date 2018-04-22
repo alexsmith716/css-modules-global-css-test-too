@@ -104,7 +104,9 @@ module.exports = {
       {
         test: /\.(scss|css)$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: 'style-loader',
+          },
           {
             loader: 'css-loader',
             options: {
@@ -224,11 +226,11 @@ module.exports = {
     // on by default in production mode
     // new webpack.NamedModulesPlugin(),
 
-    new MiniCssExtractPlugin({
-      // filename: 'styles.css',
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css'
-    }),
+    // new MiniCssExtractPlugin({
+    //   // filename: 'styles.css',
+    //   filename: '[name].[hash].css',
+    //   chunkFilename: '[id].[hash].css'
+    // }),
 
   ],
 };

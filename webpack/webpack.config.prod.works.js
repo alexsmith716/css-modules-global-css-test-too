@@ -110,9 +110,6 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: {
-              modules: false,
-            }
           },
           {
             loader: 'resolve-url-loader',
@@ -237,11 +234,11 @@ module.exports = {
     // on by default in production mode
     // new webpack.NamedModulesPlugin(),
 
-    new MiniCssExtractPlugin({
-      // filename: 'styles.css',
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css'
-    }),
+    // new MiniCssExtractPlugin({
+    //   // filename: 'styles.css',
+    //   filename: '[name].[hash].css',
+    //   chunkFilename: '[id].[hash].css'
+    // }),
 
   ],
 };
