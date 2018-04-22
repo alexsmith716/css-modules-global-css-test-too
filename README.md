@@ -35,5 +35,3 @@ Appears Error is thrown by [**postcss-modules-local-by-default**](https://github
 
 
 ### Always Learning:
-
-Hmmm, so [**html-webpack-plugin**](https://github.com/jantimon/html-webpack-plugin) uses [**extract-text-webpack-plugin**](https://github.com/webpack-contrib/extract-text-webpack-plugin) under the hood!
