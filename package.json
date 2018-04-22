@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build:works": "NODE_ENV=production webpack --config webpack/webpack.config.prod.works.js",
-    "build:breaks": "NODE_ENV=production webpack --config webpack/webpack.config.prod.breaks.js",
+    "build:error": "NODE_ENV=production webpack --config webpack/webpack.config.prod.breaks.js",
     "build:tester": "NODE_ENV=production webpack --config webpack/webpack.config.prod.tester.js"
   },
   "dependencies": {

@@ -148,20 +148,47 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|jpeg|gif|png|svg)$/i,
+        test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
           loader: 'url-loader',
           options: {
-            limit: 10000,
-          },
+            limit: 10240,
+            mimetype: 'application/font-woff'
+          }
+        }],
+      }, 
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 10240,
+            mimetype: 'application/octet-stream'
+          }
+        }],
+      }, 
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+        }],
+      }, 
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 10240,
+            mimetype: 'image/svg+xml'
+          }
         }],
       },
       {
-        test: /\.(ttf|eot|woff|woff2)$/,
+        test: /\.(jpg|jpeg|gif|png)$/i,
         use: [{
-          loader: 'file-loader',
+          loader: 'url-loader',
           options: {
-            name: '[name].[ext]',
+            limit: 10240,
           },
         }],
       },
@@ -226,11 +253,11 @@ module.exports = {
     // on by default in production mode
     // new webpack.NamedModulesPlugin(),
 
-    // new MiniCssExtractPlugin({
-    //   // filename: 'styles.css',
-    //   filename: '[name].[hash].css',
-    //   chunkFilename: '[id].[hash].css'
-    // }),
+    new MiniCssExtractPlugin({
+      // filename: 'styles.css',
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css'
+    }),
 
   ],
 };
