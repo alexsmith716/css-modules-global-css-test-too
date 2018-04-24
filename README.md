@@ -18,6 +18,25 @@ Appears Error is thrown by [**postcss-modules-local-by-default**](https://github
 ":global(xxx) declares the stuff in parenthesis in the global scope."
 
 
+### Beware !!!!! Switching off the default local scoped CSS with the ":global" switch will cause failure of "@font-face" in css.
+
+Took me many wasted hours to discover what was going on !!!!!!!
+
+https://github.com/css-modules/css-modules/issues/95
+
+Failed custom "@font-face" below:
+
+`@font-face {
+   {
+    font-family: 'FontAwesome';
+    src: url(fontawesome-webfont.eot);
+    src: url(fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(fontawesome-webfont.woff2) format("woff2"), url(fontawesome-webfont.woff) format("woff"), url(fontawesome-webfont.ttf) format("truetype"), url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiLW5hbWU9Imxlc3NlcXVhbCIgdW5pY29kZT0iJiN4ZjUwMDsiIGhvcml6LWFkdi14PSIxNzkyIiAKIC8+CiAgPC9mb250Pgo8L2RlZnM+PC9zdmc+Cg==#fontawesomeregular) format("svg");
+    font-weight: normal;
+    font-style: normal; 
+    } 
+  }`
+
+
 ### Referenced Github Issues:
 
 [**Error: Missing whitespace after :global #507**](https://github.com/webpack-contrib/sass-loader/issues/507)

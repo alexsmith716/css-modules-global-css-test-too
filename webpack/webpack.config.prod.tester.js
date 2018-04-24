@@ -8,14 +8,13 @@ const rootPath = path.resolve(__dirname, '..');
 
 module.exports = {
 
-  mode: 'production',
-
   context: rootPath,
 
   entry: {
     main: [
       'babel-polyfill',
-      './src/assets/scss/global/global2.scss',
+      // 'font-awesome/scss/font-awesome.scss',
+       './src/assets/scss/global/global2.scss',
       './src/index.js'
     ],
     vendor: [
@@ -28,24 +27,27 @@ module.exports = {
   },
 
   output: {
-    // path: __dirname,
+    // path: path.resolve(__dirname, '../build'),
+    filename: '[name].js',
+    // publicPath: './'
+    //path: __dirname,
     //filename: '[name].js',
-    // publicPath: '/',
+    //publicPath: '/',
     // path: path.resolve(__dirname, '../public/assets'),
     // // the target directory for all output files - absolute path
     // publicPath: '/assets/',
     // // the url to the output directory resolved relative to the HTML page
-    filename: '[name].[hash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    //filename: '[name].[hash].js',
+    //chunkFilename: '[name].[chunkhash].js',
   },
 
-  optimization: {
-    splitChunks: {
-      automaticNameDelimiter: "-",
-      chunks: 'all',
-      minSize: 0,
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     automaticNameDelimiter: "-",
+  //     chunks: 'all',
+  //     minSize: 0,
+  //   },
+  // },
 
   // optimization: {
   //   splitChunks: {
@@ -105,16 +107,16 @@ module.exports = {
         test: /\.(scss|css)$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          // {
-          //   loader: 'style-loader',
-          // },
           {
             loader: 'css-loader',
             options: {
               modules: true,
               localIdentName: '[name]__[local]__[hash:base64:5]',
-              //importLoaders: 2,
-              sourceMap: true
+              //importLoaders: 3,
+              sourceMap: true,
+              //  alias: {
+              //    '../fonts': 'font-awesome/fonts',
+              //  }
             }
           },
           {
@@ -127,9 +129,9 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              includePaths: [
-                // path.resolve(rootPath, 'node_modules'),
-              ],
+              //includePaths: [
+              //  path.resolve(rootPath, 'node_modules/font-awesome/scss')
+              //],
             }
           },
           {
@@ -143,77 +145,20 @@ module.exports = {
         ]
       },
       {
-        test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(jpg|jpeg|gif|png|svg)$/,
         use: [{
           loader: 'url-loader',
-          options: {
-            limit: 10240,
-            mimetype: 'application/font-woff'
-          }
-        }],
-      }, 
-      {
-        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 10240,
-            mimetype: 'application/octet-stream'
-          }
-        }],
-      }, 
-      {
-        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'file-loader',
-        }],
-      }, 
-      {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 10240,
-            mimetype: 'image/svg+xml'
-          }
         }],
       },
       {
-        test: /\.(jpg|jpeg|gif|png)$/i,
+        test: /\.(ttf|eot|woff|woff2)$/,
         use: [{
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
-            limit: 10240,
+            name: '[name].[ext]',
           },
         }],
       },
-      // {
-      //   test: /\.(jpg|jpeg|gif|png|svg)$/i,
-      //   use: [{
-      //     loader: 'url-loader',
-      //     options: {
-      //       limit: 10240,
-      //     },
-      //   }],
-      // },
-      // {
-      //   test: /\.(ttf|eot|woff|woff2)$/,
-      //   use: [{
-      //     loader: 'file-loader',
-      //     options: {
-      //       name: '[name].[ext]',
-      //     },
-      //   }],
-      // },
-      // webpack 4.0.0 handles JSON natively 
-      // {
-      //   test: /\.json$/,
-      //   use: [
-      //     {
-      //       loader: 'json-loader',
-      //     }
-      //   ]
-      // },
       {
         test: '/popper.js/',
         use: [{
@@ -238,23 +183,10 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.scss', '.css',],
-    modules: [ 'src', 'node_modules', ],
+    extensions: ['.js', '.jsx',],
   },
 
   plugins: [
-
-    new webpack.DefinePlugin({
-      'process.env': {
-        CLIENT: JSON.stringify(true),
-        NODE_ENV  : JSON.stringify('production'),
-      },
-      REDUX_DEVTOOLS : false,
-      __CLIENT__: true,
-      __SERVER__: false,
-      __DEVELOPMENT__: false,
-      __DEVTOOLS__: false,
-    }),
 
     new HtmlWebpackPlugin({
       template: path.join(rootPath, './src/index.html'),
@@ -267,9 +199,9 @@ module.exports = {
     // new webpack.NamedModulesPlugin(),
 
     new MiniCssExtractPlugin({
-      // filename: 'styles.css',
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css'
+      filename: '[name].css',
+      //filename: '[name].[hash].css',
+      //chunkFilename: '[id].[hash].css'
     }),
 
   ],

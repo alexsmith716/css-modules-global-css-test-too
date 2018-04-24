@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import ContentContainer from '../../components/ContentContainer/ContentContainer';
 
-import AppScss from './AppScss.scss';
-import AppCss from './AppCss.css';
+// import styles from './AppScss.scss';
+// import AppCss from './AppCss.css';
 
 import iconBar36 from './svg/icon-bar-36.svg';
 
-export class App extends React.Component {
+export default class App extends Component {
 
   render () {
+
+    const styles = require('./AppScss.scss');
+    const AppCss = require('./AppCss.css');
 
     return (
       <div>
@@ -28,7 +31,7 @@ export class App extends React.Component {
                 <a className="nav-link" href="#">Link</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#"><span className={`fa fa-headphones ${AppScss.colorGold}`}></span><span className={AppScss.colorGold}>Headphones!</span></a>
+                <a className="nav-link" href="#"><span className={`fa fa-headphones ${styles.colorGold}`}></span><span className={styles.colorGold}>Headphones!</span></a>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -50,9 +53,15 @@ export class App extends React.Component {
           <ContentContainer />
         </div>
 
+        <p><span className={`fa fa-headphones ${styles.colorGold}`}></span><span className={styles.colorGold}>Footer Headphones!</span></p>
+        <p><span className={`fa fa-headphones ${styles.colorGold}`}></span><span className={styles.colorGold}>Footer Headphones!</span></p>
+        <p><span className="fa fa-headphones"></span><span className={styles.colorGold}>PPPPPPPPP Headphones!</span></p>
+        <p className="fa fa-headphones">PPPPPPPPP Headphones!</p>
+
         <footer className="py-5 bg-dark">
           <div className="container">
             <p className={`m-0 text-center ${AppCss.colorCrimson}`}>Copyright &copy; 2018 · Election App 2018!</p>
+            <p className="m-0 text-center"><span className={`fa fa-headphones ${styles.colorGold}`}></span><span className={styles.colorGold}>Footer Headphones!</span></p>
           </div>
         </footer>
 
@@ -60,5 +69,3 @@ export class App extends React.Component {
     )
   };
 };
-
-export default App;
