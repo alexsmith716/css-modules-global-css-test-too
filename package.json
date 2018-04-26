@@ -6,9 +6,10 @@
   "author": "dev",
   "license": "MIT",
   "scripts": {
-    "build:works": "webpack --mode production --config webpack/webpack.config.prod.works.js",
-    "build:error": "webpack --mode production --config webpack/webpack.config.prod.breaks.js",
-    "build:tester": "webpack --mode production --config webpack/webpack.config.prod.tester.js"
+    "build:works": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.works.js",
+    "build:error": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.breaks.js",
+    "build:tester": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.tester.js",
+    "build:bootstraploader": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.bootstrap.loader.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -39,9 +40,11 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "bootstrap-loader": "^2.2.0",
     "concurrently": "^3.5.1",
     "css-loader": "^0.28.11",
     "expose-loader": "^0.7.5",
+    "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "json-loader": "^0.5.7",

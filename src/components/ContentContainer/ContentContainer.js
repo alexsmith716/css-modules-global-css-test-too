@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './ContentContainer.scss';
 
 const ContentContainer = () => {
+
+  const styles = require('./ContentContainer.scss');
 
   return (
 
@@ -9,7 +10,7 @@ const ContentContainer = () => {
 
       <main role="main">
 
-        <div className={`jumbotron ${styles.masthead}`}>
+        <div className={styles.masthead}>
 
           <div className={styles.introBody}>
 
