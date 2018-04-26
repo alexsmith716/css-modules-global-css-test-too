@@ -1,5 +1,16 @@
+
 module.exports = {
   use: [
-    'autoprefixer',
+    'postcss-import',
+    'postcss-url',
+    'postcss-cssnext',
+    'postcss-browser-reporter',
+    'postcss-reporter'
   ]
 };
+
+// module.exports = {
+//   use: [
+//    'autoprefixer',
+//  ]
+// };
