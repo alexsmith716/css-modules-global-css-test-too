@@ -5,7 +5,7 @@
   // customize Bootstrap variables based on the values established in the Bootstrap _variables.scss file
   "bootstrapCustomizations": "./src/assets/scss/bootstrap/bootstrapCustomizations.scss",
   // custom styles. @imports of application styles
-  "appStyles": "./src/assets/scss/bootstrap/app3.scss",
+  "appStyles": "./src/assets/scss/app/app3.scss",
   // Outputs debugging info
   "loglevel": "disabled",
   // NODE_ENV environment variable
@@ -82,7 +82,6 @@
     "tooltip": true,
     "transitions": true,
     "type": true,
-    "utilities": true,
-    "variables": true
+    "utilities": true
   }
 }

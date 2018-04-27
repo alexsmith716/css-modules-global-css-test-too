@@ -9,7 +9,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const rootPath = path.resolve(__dirname, '..');
-var assetsPath = path.resolve(rootPath, './dist');
+const assetsPath = path.resolve(rootPath, './dist');
 
 // https://github.com/webpack-contrib/expose-loader
 // https://webpack.js.org/guides/shimming/
@@ -29,9 +29,6 @@ module.exports = {
     vendor: [
       'react',
       'react-dom',
-      'jquery',
-      'popper.js',
-      'bootstrap',
     ],
   },
 
@@ -134,12 +131,12 @@ module.exports = {
               sourceMap: true
             }
           },
-          {
-            loader: 'resolve-url-loader',
-            options: {
-              sourceMap: true
-            }
-          },
+          // {
+          //   loader: 'resolve-url-loader',
+          //   options: {
+          //     sourceMap: true
+          //   }
+          // },
           {
             loader: 'sass-loader',
             options: {
@@ -193,47 +190,6 @@ module.exports = {
           },
         }],
       },
-      {
-        // test: '/popper.js/',
-        test: require.resolve('popper.js'),
-        use: [{
-          loader: 'expose-loader',
-          options: 'popper',
-        },
-        {
-          loader: 'expose-loader',
-          options: 'Popper',
-        }]
-      },
-      {
-        // test: '/jquery/',
-        test: require.resolve('jquery'),
-        use: [
-          {
-            loader: 'expose-loader',
-            options: 'jQuery',
-          },
-          {
-            loader: 'expose-loader',
-            options: 'jquery',
-          },
-          {
-            loader: 'expose-loader',
-            options: '$',
-          }
-        ]
-      },
-      // { 
-      //   test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/,
-      //   use: [
-      //     {
-      //       loader: 'imports-loader?jQuery=jquery'
-      //     },
-      //     // {
-      //     //   loader: 'imports-loader?$=jquery'
-      //     // },
-      //   ]
-      // },
     ]
   },
 
@@ -245,14 +201,14 @@ module.exports = {
 
     new CleanWebpackPlugin([assetsPath], { root: rootPath }),
 
-   new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify('production'), },
+
       __CLIENT__: true,
       __SERVER__: false,
       __DEVELOPMENT__: false,
       __DEVTOOLS__: false,
+    
     }),
 
     new webpack.ProvidePlugin({
