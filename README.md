@@ -81,3 +81,5 @@ Failed custom "@font-face" below:
 
 
 ### Comments:
+
+https://webpack.js.org/guides/shimming/
