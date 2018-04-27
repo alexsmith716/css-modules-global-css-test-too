@@ -225,8 +225,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.scss', '.css',],
-    modules: [ 'src', 'node_modules', ],
+    extensions: ['.js', '.jsx', '.json'],
   },
 
   plugins: [
