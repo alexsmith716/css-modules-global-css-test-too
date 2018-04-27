@@ -44,13 +44,9 @@ $fonts-url-path: '../../fonts';
 @font-face {
   font-family: 'Old English';
   src: url('#{$fonts-url-path}/old-english.woff2') format('woff2');
-  // src: url('../fonts/old-english.woff2') format('woff2');
-  // url('../fonts/old-english.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
-// Other font size variables are based on this, so this goes into the
+// Other Bootstrap font size variables are based on this, so pre Bootstrap Customizations go into this file
 // preBootstrapCustomizations.scss file.
 
 // $font-size-base: 16px;
@@ -63,6 +59,6 @@ $input-color: #9B30FF;
 $input-border-color: #FFFF00;
 $dropdown-bg: #FFFAFA;  // <<<<<<<<<<<<< snow: FFFAFA
 
-@import "~bootstrap/scss/_functions.scss";
-@import "~bootstrap/scss/_variables.scss";
-@import "~bootstrap/scss/_mixins.scss";
+
+// font-weight: normal;
+// font-style: normal;

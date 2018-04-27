@@ -10,6 +10,10 @@ body {
   // font-size: 1rem;
 }
 
+#mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+  cursor: pointer;
+}
+
 h2 {
   @include tester-font2;
 }
@@ -20,6 +24,14 @@ hr {
 
 hr.light {
   border-color: $light;
+}
+
+.bootstrapDefaultFont {
+  @include bootstrap-default-font;
+}
+
+.openSansLightFont {
+  @include opensans-light-font;
 }
 
 .colorPurple {

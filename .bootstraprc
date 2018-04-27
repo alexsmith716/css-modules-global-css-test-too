@@ -32,7 +32,6 @@
   },
   // Bootstrap scripts (Default: all)
   // "scripts": true / false // enable/disable all scripts
-  // "scripts": false,
   "scripts": {
     "alert": true,
     "button": true,
