@@ -54,6 +54,16 @@
   color: #CD6600;
 }
 
+@mixin colorTeal() {
+  color: #008080;
+}
+
+@mixin colorDodgerblueFour() {
+  color: #104E8B;
+}
+
+// dodgerblue 4       104E8B
+// teal               008080
 // darkorange         CD6600
 // green              008B00
 // cyan 2:            00EEEE
