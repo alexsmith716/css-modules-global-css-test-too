@@ -6,8 +6,12 @@ body {
 body {
   // padding-top: 3.5rem;
   padding-top: 54px;
-  @include tester-font2;
+  // @include tester-font2;
   // font-size: 1rem;
+}
+
+h2 {
+  @include tester-font2;
 }
 
 hr {
