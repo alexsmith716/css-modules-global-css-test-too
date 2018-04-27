@@ -25,15 +25,30 @@
 // ivory:             FFFFF0
 // snow:              FFFAFA
 
-// Override default Bootstrap "$font-family-sans-serif" setting
+// Bootstrap "$font-family-sans-serif" setting:
+// $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+// Override default Bootstrap "$font-family-sans-serif" setting with "OpenSans-Light":
 // $font-family-sans-serif: 'OpenSans-Light', Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// $fonts-url-path: '../../fonts';
+// Override default Bootstrap "$font-family-sans-serif" setting with "Old English":
+$font-family-sans-serif: "Old English", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// @font-face {
-//   font-family: 'OpenSans-Light';
-//   src: url('#{$fonts-url-path}/OpenSans-Light.ttf') format('truetype');
-// }
+$fonts-url-path: '../../fonts';
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('#{$fonts-url-path}/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Old English';
+  src: url('#{$fonts-url-path}/old-english.woff2') format('woff2');
+  // src: url('../fonts/old-english.woff2') format('woff2');
+  // url('../fonts/old-english.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Other font size variables are based on this, so this goes into the
 // preBootstrapCustomizations.scss file.
@@ -47,3 +62,7 @@ $navbar-dark-color: #C6E2FF;
 $input-color: #9B30FF;
 $input-border-color: #FFFF00;
 $dropdown-bg: #FFFAFA;  // <<<<<<<<<<<<< snow: FFFAFA
+
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
