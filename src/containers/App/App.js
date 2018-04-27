@@ -8,7 +8,9 @@ export default class App extends Component {
 
     const AppScss = require('./AppScss.scss');
     const AppCss = require('./AppCss.css');
-    const iconBar36 = require('./svg/icon-bar-36.svg');
+    // const iconBar36 = require('./svg/icon-bar-36.svg');
+    // <img src={iconBar36} alt="Nav Menu"/>
+    // <span className="navbar-toggler-icon"></span>
 
     return (
       <div>
@@ -16,7 +18,7 @@ export default class App extends Component {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <a className="navbar-brand" href="#">Election App</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <img src={iconBar36} alt="Nav Menu"/>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav mr-auto">

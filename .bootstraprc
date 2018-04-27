@@ -32,20 +32,20 @@
   },
   // Bootstrap scripts (Default: all)
   // "scripts": true / false // enable/disable all scripts
-  "scripts": true,
-  // "scripts": {
-  //   "alert": true,
-  //   "button": true,
-  //   "carousel": true,
-  //   "collapse": true,
-  //   "dropdown": true,
-  //   "modal": true,
-  //   "popover": true,
-  //   "scrollspy": true,
-  //   "tab": true,
-  //   "tooltip": true,
-  //   "util": true
-  // },
+  // "scripts": false,
+  "scripts": {
+    "alert": true,
+    "button": true,
+    "carousel": true,
+    "collapse": true,
+    "dropdown": true,
+    "modal": true,
+    "popover": true,
+    "scrollspy": true,
+    "tab": true,
+    "tooltip": true,
+    "util": true
+  },
   // Bootstrap styles (Default: all)
   // "styles": true / false // enable/disable all scripts
   "styles": {
