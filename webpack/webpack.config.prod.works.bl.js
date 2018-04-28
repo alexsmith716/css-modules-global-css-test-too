@@ -121,7 +121,8 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: true,
-              importLoaders: 4,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+              // importLoaders: 3,
               sourceMap: true
             }
           },
@@ -131,12 +132,6 @@ module.exports = {
               sourceMap: true
             }
           },
-          // {
-          //   loader: 'resolve-url-loader',
-          //   options: {
-          //     sourceMap: true
-          //   }
-          // },
           {
             loader: 'sass-loader',
             options: {

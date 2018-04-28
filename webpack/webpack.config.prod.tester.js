@@ -4,9 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 const rootPath = path.resolve(__dirname, '..');
+const assetsPath = path.resolve(rootPath, './dist');
 
 module.exports = {
+
+  devtool: 'source-map',
 
   context: rootPath,
 
@@ -104,7 +109,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(scss|css)$/i,
+        test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -112,7 +117,6 @@ module.exports = {
             options: {
               modules: true,
               localIdentName: '[name]__[local]__[hash:base64:5]',
-              //importLoaders: 3,
               sourceMap: true,
               //  alias: {
               //    '../fonts': 'font-awesome/fonts',
@@ -187,6 +191,18 @@ module.exports = {
   },
 
   plugins: [
+
+    new CleanWebpackPlugin([assetsPath], { root: rootPath }),
+
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify('production'), },
+
+      __CLIENT__: true,
+      __SERVER__: false,
+      __DEVELOPMENT__: false,
+      __DEVTOOLS__: false,
+    
+    }),
 
     new HtmlWebpackPlugin({
       template: path.join(rootPath, './src/index.html'),
