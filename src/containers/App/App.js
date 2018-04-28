@@ -55,7 +55,7 @@ export default class App extends Component {
 
         <footer className="py-5 bg-dark">
           <div className="container">
-            <p className={`m-0 text-center ${AppCss.colorCrimsonLocal}`}>Copyright &copy; 2018 · Election App 2018!</p>
+            <p className={`m-0 text-center ${AppCss.colorCrimsonCssLocal}`}>Copyright &copy; 2018 · Election App 2018!</p>
             <p className="m-0 text-center"><span className={`fa fa-headphones ${AppScss2.colorGoldLocal}`}></span><span className={AppScss2.colorGoldLocal}>Footer Headphones!</span></p>
           </div>
         </footer>
@@ -64,7 +64,7 @@ export default class App extends Component {
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">Modal Test</h5>
+                <h5 className="modal-title colorGreenYellowGlobalCSS" id="exampleModalLabel">Modal Test</h5>
                 <button className="close" type="button" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">×</span>
                 </button>
@@ -74,9 +74,9 @@ export default class App extends Component {
 
                 <p className="allerLightFont">This paragraph's '@font-face' is 'aller-light'.</p>
 
-                <p className="bootstrapDefaultFont colorLightblueGlobal">This paragraph's '@font-face' is 'font-family-sans-serif'.</p>
+                <p className="bootstrapDefaultFont colorSalmonGlobal">This paragraph's '@font-face' is 'font-family-sans-serif'.</p>
 
-                <p className="firamonoRegularFont">This paragraph's '@font-face' is 'FiraMono-Regular'.</p>
+                <p className="firaMonoRegularFont">This paragraph's '@font-face' is 'FiraMono-Regular'.</p>
 
                 <p className="norwesterFont">This paragraph's '@font-face' is 'norwester'.</p>
 
@@ -85,6 +85,10 @@ export default class App extends Component {
                 <p className="scadaRegularFont">This paragraph's '@font-face' is 'Scada-Regular'.</p>
 
                 <p className="sourcesansproRegularWebfontFont">This paragraph's '@font-face' is 'sourcesanspro-regular-webfont'.</p>
+
+                <p className={`colorDarkgrayGlobal ${AppScss2.firaSansBookItalicFontGlobalToLocal}`}>This paragraph's '@font-face' is 'FiraSans-BookItalic'. It is scoped Global to Local.</p>
+
+                <p className="colorOrangeredGlobal firaSansBookItalicFont">This paragraph's '@font-face' is 'FiraSans-BookItalic' It is scoped Global.</p>
 
               </div>
               <div className="modal-footer">

@@ -42,6 +42,10 @@
   font-family: 'aller-light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@mixin firasans-bookitalic-font() {
+  font-family: 'FiraSans-BookItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 @mixin firamono-regular-font() {
   font-family: 'FiraMono-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
