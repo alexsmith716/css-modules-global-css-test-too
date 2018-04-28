@@ -1,9 +1,9 @@
 {
   "bootstrapVersion": 4,
   // Bootstrap variables that get imported before original Bootstrap variables
-  "preBootstrapCustomizations": "./src/assets/scss/bootstrap/preBootstrapCustomizations.scss",
+  "preBootstrapCustomizations": "./src/assets/scss/bootstrap/customizations/preBootstrapCustomizations.scss",
   // customize Bootstrap variables based on the values established in the Bootstrap _variables.scss file
-  "bootstrapCustomizations": "./src/assets/scss/bootstrap/bootstrapCustomizations.scss",
+  "bootstrapCustomizations": "./src/assets/scss/bootstrap/customizations/bootstrapCustomizations.scss",
   // custom styles. @imports of application styles
   "appStyles": "./src/assets/scss/app/app3.scss",
   // Outputs debugging info

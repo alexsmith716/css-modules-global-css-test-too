@@ -4,10 +4,18 @@ body {
 }
 
 body {
-  // padding-top: 3.375rem;
+  // padding-top: 3.5rem;
   padding-top: 54px;
-  @include tester-font2;
+  // @include tester-font2;
   // font-size: 1rem;
+}
+
+#mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+  cursor: pointer;
+}
+
+h2 {
+  @include tester-font2;
 }
 
 hr {
@@ -18,43 +26,84 @@ hr.light {
   // border-color: $light;
 }
 
-.colorPurple {
+// --------------------------------------------------------------------------------
+// FONTS
+// --------------------------------------------------------------------------------
+
+
+.allerLightFont {
+  @include aller-light-font;
+}
+
+.bootstrapDefaultFont {
+  @include bootstrap-default-font;
+}
+
+.firamonoRegularFont {
+  @include firamono-regular-font;
+}
+
+.norwesterFont {
+  @include norwester-font;
+}
+
+.oldEnglishFont {
+  @include old-english-font;
+}
+
+.openSansLightFont {
+  @include opensans-light-font;
+}
+
+.scadaRegularFont {
+  @include scada-regular-font;
+}
+
+.sourcesansproRegularWebfontFont {
+  @include sourcesanspro-regular-webfont-font;
+}
+
+// --------------------------------------------------------------------------------
+// COLORS
+// --------------------------------------------------------------------------------
+
+.colorPurpleGlobal {
   color: #9B30FF;
 }
 
-.colorOlive {
+.colorOliveGlobal {
   color: #808000;
 }
 
-.colorCrimson {
+.colorCrimsonGlobal {
   color: #DC143C;
 }
 
-.colorGold {
+.colorGoldGlobal {
   color: #FFD700;
 }
 
-.colorLightblue {
+.colorLightblueGlobal {
   color: #BFEFFF;
 }
 
-.colorLavender {
+.colorLavenderGlobal {
   color: #E6E6FA;
 }
 
-.colorTurquoise {
+.colorTurquoiseGlobal {
   color: #00F5FF;
 }
 
-.colorYellow {
+.colorYellowGlobal {
   color: #FFFF00;
 }
 
-.colorSpringgreen {
+.colorSpringgreenGlobal {
   color: #00EE76;
 }
 
-.colorAzure {
+.colorAzureGlobal {
   color: #F0FFFF;
 }
 

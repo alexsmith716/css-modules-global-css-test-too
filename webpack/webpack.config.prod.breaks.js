@@ -4,11 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 const rootPath = path.resolve(__dirname, '..');
+const assetsPath = path.resolve(rootPath, './dist');
 
 module.exports = {
 
-  mode: 'production',
+  devtool: 'source-map',
 
   context: rootPath,
 
@@ -122,12 +125,12 @@ module.exports = {
               sourceMap: true,
             }
           },
-          {
-            loader: 'resolve-url-loader',
-            options: {
-              sourceMap: true,
-            }
-          },
+          // {
+          //   loader: 'resolve-url-loader',
+          //   options: {
+          //     sourceMap: true,
+          //   }
+          // },
           {
             loader: 'sass-loader',
             options: {

@@ -6,10 +6,10 @@
   "author": "dev",
   "license": "MIT",
   "scripts": {
-    "build:works": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.works.js",
-    "build:error": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.breaks.js",
-    "build:tester": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.tester.js",
-    "bbb": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.bootstrap.loader.js"
+    "build:works:bootstraploader": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.works.bl.js",
+    "build:works:includeexclude": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.works.ie.js",
+    "build:breaks:globalswitch": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.breaks.js",
+    "build:tester": "NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.tester.js"
   },
   "dependencies": {
     "axios": "^0.18.0",

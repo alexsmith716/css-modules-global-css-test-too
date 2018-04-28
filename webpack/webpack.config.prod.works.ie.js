@@ -11,12 +11,14 @@ const assetsPath = path.resolve(rootPath, './dist');
 
 module.exports = {
 
+  devtool: 'source-map',
+
   context: rootPath,
 
   entry: {
     main: [
       'babel-polyfill',
-      './src/assets/scss/bootstrap/theme.scss',
+      './src/assets/scss/theme/theme.scss',
       './src/index.js'
     ],
     vendor: [
@@ -109,12 +111,29 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
           },
           {
             loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap: true
+            }
           },
           {
             loader: 'sass-loader',
+            options: {
+              outputStyle: 'expanded',
+              sourceMap: true,
+              sourceMapContents: true
+            }
           },
         ]
       },

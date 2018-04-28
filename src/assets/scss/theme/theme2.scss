@@ -1,12 +1,9 @@
 
-// @import "../../../../node_modules/"
-
 $fa-font-path: "~font-awesome/fonts";
-// $fa-font-path: "../../../../node_modules/font-awesome/fonts";
 
 // --------------------------------------------------------------------------------------------------
 
-// @import "./preBootstrapCustomizations.scss";
+// @import "../bootstrap/customizations/preBootstrapCustomizations.scss";
 
 // --------------------------------------------------------------------------------------------------
 
@@ -22,18 +19,21 @@ $fa-font-path: "~font-awesome/fonts";
 
 // --------------------------------------------------------------------------------------------------
 
-// @import "./bootstrapCustomizations.scss";
+// @import "../bootstrap/customizations/bootstrapCustomizations.scss";
 
 // --------------------------------------------------------------------------------------------------
 
-@import "./bootstrap.scss";
-// @import "~bootstrap/scss/bootstrap.scss";
+@import "../bootstrap/cssAsScss/bootstrap.scss";
 
 // --------------------------------------------------------------------------------------------------
 
 @import "~font-awesome/scss/font-awesome.scss";
 
 // --------------------------------------------------------------------------------------------------
+
+@import "../fonts/fonts.scss";
+
+// -------------------------------------------------------------------------------
 
 @import "../mixins/mixins.scss";
 

@@ -31,7 +31,7 @@ export default class App extends Component {
                   <i className="fa fa-fw fa-sign-in"></i>Modal</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#"><span className={`fa fa-headphones ${AppScss2.colorGold}`}></span><span className={AppScss2.colorGold}>Headphones!</span></a>
+                <a className="nav-link" href="#"><span className={`fa fa-headphones ${AppScss2.colorGoldLocal}`}></span><span className={AppScss2.colorGoldLocal}>Headphones!</span></a>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -55,12 +55,12 @@ export default class App extends Component {
 
         <footer className="py-5 bg-dark">
           <div className="container">
-            <p className={`m-0 text-center ${AppCss.colorCrimson}`}>Copyright &copy; 2018 · Election App 2018!</p>
-            <p className="m-0 text-center"><span className={`fa fa-headphones ${AppScss2.colorGold}`}></span><span className={AppScss2.colorGold}>Footer Headphones!</span></p>
+            <p className={`m-0 text-center ${AppCss.colorCrimsonLocal}`}>Copyright &copy; 2018 · Election App 2018!</p>
+            <p className="m-0 text-center"><span className={`fa fa-headphones ${AppScss2.colorGoldLocal}`}></span><span className={AppScss2.colorGoldLocal}>Footer Headphones!</span></p>
           </div>
         </footer>
 
-        <div className="modal fade openSansLightFont" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-header">
@@ -70,8 +70,22 @@ export default class App extends Component {
                 </button>
               </div>
               <div className="modal-body">
-                <p>Modal is working.</p>
-                <p>This modal is custom font '@mixin opensans-light-font'.</p>
+                <p>Modal is working. This paragraph's font and the above modal-title font is 'Old English'. It is the default 'global' font for this app. It is overriding Bootstrap's default font 'font-family-sans-serif'. It's a hard to read font but easily recognizable for development purposes.</p>
+
+                <p className="allerLightFont">This paragraph's '@font-face' is 'aller-light'.</p>
+
+                <p className="bootstrapDefaultFont colorLightblueGlobal">This paragraph's '@font-face' is 'font-family-sans-serif'.</p>
+
+                <p className="firamonoRegularFont">This paragraph's '@font-face' is 'FiraMono-Regular'.</p>
+
+                <p className="norwesterFont">This paragraph's '@font-face' is 'norwester'.</p>
+
+                <p className="openSansLightFont colorCrimsonGlobal">This paragraph's '@font-face' is 'OpenSans-Light'.</p>
+
+                <p className="scadaRegularFont">This paragraph's '@font-face' is 'Scada-Regular'.</p>
+
+                <p className="sourcesansproRegularWebfontFont">This paragraph's '@font-face' is 'sourcesanspro-regular-webfont'.</p>
+
               </div>
               <div className="modal-footer">
                 <button className="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
