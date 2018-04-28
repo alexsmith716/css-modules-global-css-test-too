@@ -27,7 +27,7 @@ hr.light {
 }
 
 // --------------------------------------------------------------------------------
-// FONTS
+// GLOBAL FONTS
 // --------------------------------------------------------------------------------
 
 
@@ -39,7 +39,11 @@ hr.light {
   @include bootstrap-default-font;
 }
 
-.firamonoRegularFont {
+.firaSansBookItalicFont {
+  @include firasans-bookitalic-font;
+}
+
+.firaMonoRegularFont {
   @include firamono-regular-font;
 }
 
@@ -64,7 +68,7 @@ hr.light {
 }
 
 // --------------------------------------------------------------------------------
-// COLORS
+// GLOBAL COLORS
 // --------------------------------------------------------------------------------
 
 .colorPurpleGlobal {
@@ -107,6 +111,20 @@ hr.light {
   color: #F0FFFF;
 }
 
+.colorDarkgrayGlobal {
+  color: #A9A9A9;
+}
+
+.colorSalmonGlobal {
+  color: #FF8C69;
+}
+
+.colorOrangeredGlobal {
+  color: #FF4500;
+}
+
+// orangered:         FF4500
+// darkgray:          A9A9A9
 // cyan 2:            00EEEE
 // rosybrown 1:       FFC1C1
 // orange 1:          FFA500

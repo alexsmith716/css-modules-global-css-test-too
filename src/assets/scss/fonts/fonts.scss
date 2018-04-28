@@ -2,12 +2,17 @@
 $fonts-url-path: '../../fonts';
 
 // --------------------------------------------------------------------------------
-// CUSTOM FONTS
+// CUSTOM FONTS ADDED
 // --------------------------------------------------------------------------------
 
 @font-face {
   font-family: 'aller-light';
   src: url('#{$fonts-url-path}/aller-light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FiraSans-BookItalic';
+  src: url('#{$fonts-url-path}/FiraSans-BookItalic.woff') format('woff');
 }
 
 @font-face {
