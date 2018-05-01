@@ -9,16 +9,17 @@ export default class App extends Component {
     const styles = require('./AppScss.scss');
     const AppScss2 = require('./AppScss2.scss');
     const AppCss = require('./AppCss.css');
-    // const iconBar36 = require('./svg/icon-bar-36.svg');
-    // <img src={iconBar36} alt="Nav Menu"/>
+    // const iconBar30 = require('./svg/icon-bar-30.svg');
+    // <img src={iconBar30} width="30" height="30" alt=""/>
     // <span className="navbar-toggler-icon"></span>
+    // <span className={`fa fa-bars ${styles.faBars}`}></span>
 
     return (
       <div className={styles.app}>
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
           <a className={`navbar-brand ${styles.brand}`} href="#">Election App</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
@@ -49,16 +50,19 @@ export default class App extends Component {
           </div>
         </nav>
 
-        <div>
+
+        <div className={styles.appContent}>
           <ContentContainer />
         </div>
 
-        <footer className="py-5 bg-dark">
+
+        <footer className={`py-5 ${styles.footer}`}>
           <div className="container">
             <p className={`m-0 text-center ${AppCss.colorCrimsonCssLocal}`}>Copyright &copy; 2018 · Election App 2018!</p>
             <p className="m-0 text-center"><span className={`fa fa-headphones ${AppScss2.colorGoldLocal}`}></span><span className={AppScss2.colorGoldLocal}>Footer Headphones!</span></p>
           </div>
         </footer>
+
 
         <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog" role="document">
@@ -70,7 +74,8 @@ export default class App extends Component {
                 </button>
               </div>
               <div className="modal-body">
-                <p>Modal is working. This paragraph's font and the above modal-title font is 'Old English'. It is the default 'global' font for this app. It is overriding Bootstrap's default font 'font-family-sans-serif'. It's a hard to read font but easily recognizable for development purposes.</p>
+
+                <p>Modal is working. This paragraph's font and the above modal-title's font is 'Old English'. It is the default 'global' font for this app. It is overriding Bootstrap's default font 'font-family-sans-serif'. It's a hard to read font but easily recognizable for development purposes.</p>
 
                 <p className="allerLightFont">This paragraph's '@font-face' is 'aller-light'.</p>
 

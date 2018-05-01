@@ -105,7 +105,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(scss|css)$/i,
+        test: /\.(scss|css)$/,
         include: [ path.resolve(rootPath, 'src/assets/scss') ],
         use: [
           MiniCssExtractPlugin.loader,
@@ -138,7 +138,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(scss|css)$/i,
+        test: /\.(scss|css)$/,
         exclude: [ path.resolve(rootPath, 'src/assets/scss') ],
         use: [
           MiniCssExtractPlugin.loader,

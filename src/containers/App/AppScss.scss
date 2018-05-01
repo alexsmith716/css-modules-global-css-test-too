@@ -1,14 +1,41 @@
 
 .app {
-
   .brand {
     @include bootstrap-default-font;
-    color: #00BFFF; // deepskyblue 1
+    color: #00BFFF;
     // cursor: pointer;
   }
 
-  nav :global(.fa) {
-    // line-height: 20px;
-  }
-
+  // nav :global(.fa) {
+  // 
+  // }
 }
+
+.appContent {
+  // padding-top: 3.5rem;
+  padding-top: 56px;
+  position: relative;
+}
+
+.faBars {
+  // transform: scale(1.5, 1.5);
+  // font-size: 28;
+}
+
+.footer {
+  background: #A1A1A1;
+}
+
+// :global() {
+//   
+// }
+
+
+// lightsteelblue 1:    00BFFF
+// deepskyblue 1:       CAE1FF
+// gray 63:             A1A1A1
+// slategray 1;         C6E2FF
+// lightsteelblue 1:    CAE1FF
+// ghostwhite:          F8F8FF
+// aliceblue:           F0F8FF
+// gray 40:             666666

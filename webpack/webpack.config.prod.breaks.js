@@ -105,7 +105,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(scss|css)$/i,
+        test: /\.(scss|css)$/,
         use: [
           {
             loader: 'style-loader',
