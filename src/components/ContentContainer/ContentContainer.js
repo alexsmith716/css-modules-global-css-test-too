@@ -8,27 +8,27 @@ const ContentContainer = () => {
 
     <div>
 
-      <main role="main">
+        <header className={styles.masthead}>
 
-        <div className={styles.masthead}>
+          <div className="container">
 
-          <div className={styles.introBody}>
+            <h1 className={styles.mastheadHeading}>Midtern Election App 2018</h1>
 
-            <div className={`container ${styles.introCont}`}>
+            <h2 className={styles.mastheadSubheading}>The Midterms are almost here!</h2>
 
-              <h1 className={styles.introHeading}>Midtern Election App 2018</h1>
+            <div className={styles.mastheadBlurb}>What are you and others saying?</div>
 
-              <h2 className={styles.introHeadingSub}>The midterms are almost here!</h2> 
+            <div className={styles.mastheadBlurbElipsis}>join the conversation.</div>
 
-              <p className={styles.introText}><b>What are you and others saying?<br/>... join the conversation.</b></p> 
+            <div className={styles.mastheadSignup}>
 
-              <p><a className="btn btn-primary btn-lg" href="#" role="button">Sign Up Now &raquo;</a></p>
+              <a className="btn btn-primary btn-lg" role="button" href="#">Sign Up Now</a>
 
             </div>
 
           </div>
 
-        </div>
+        </header>
 
         <div className="container">
 
@@ -54,11 +54,8 @@ const ContentContainer = () => {
 
           </div>
 
-          <hr/>
-
         </div>
 
-      </main>
 
     </div>
 

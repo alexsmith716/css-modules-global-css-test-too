@@ -1,63 +1,93 @@
+
 .masthead {
-  background-color:#eeeeee;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
   background-image: url('./img/splashImage-2048x719.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  height:480px; 
+  height:550; 
   border-radius: 0 !important;
+  background-position-x: 32%;
   @include background-cover;
 
-  .introBody {
-    @include colorDarkorange;
-    @include tester-font;
+  padding-bottom: 50px;
 
-    .introCont {
-      padding-top: 60;
-      max-width:100%;
+  padding-right: 60px;
+  padding-left: 60px;
 
-      .introHeading {
-        @include colorDodgerblueFour;
-        @include tester-font3;
-      }
+  text-align: center;
+  @include colorDarkorange;
+  @include tester-font;
 
-      .introHeadingSub {
-        @include colorCrimson;
-      }
-
-      .introText {
-        margin-bottom:15px;
-        font-size:21px;
-        font-weight:200;
-        @include tester-font4;
-      }
-    }
+  .mastheadHeading {
+    font-size: 5rem;
+    font-weight: 600;
+    @include colorDodgerblueFour;
+    @include tester-font3;
   }
 
-  // less    than: 768px
-  // greater than: 768px
+  .mastheadSubheading {
+    font-size: 3rem;
+    @include colorCrimson;
+  }
 
-  @media (min-width:768px){
+  .mastheadBlurb {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    @include tester-font4;
+  }
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+  .mastheadBlurbElipsis {
+    margin-left: 25px;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    @include tester-font4;
+  }
 
-    padding-right: 60px;
-    padding-left: 60px;
+  .mastheadSignup {
+    text-align: center;
+  }
 
-    h1 {
-      font-size: 63px;
+  @media (min-width: 768px) {
+
+    padding-top: 70px;
+    text-align: left;
+
+    .mastheadHeading {
+      font-size: 5rem;
+      font-weight: 600;
+    }
+    
+    .mastheadSubheading {
+      font-size: 4rem;
+      font-weight: 500;
+    }
+    
+    .mastheadBlurb {
+      font-size: 3rem;
+      font-weight: 400;
+    }
+    
+    .mastheadBlurbElipsis {
+      font-size: 3rem;
+      font-weight: 400;
+    }
+    .mastheadSignup {
+      text-align: left;
     }
 
   }
-
-  @media (max-width:768px){
-
-    padding-top: 32px;
-    padding-bottom: 32px;
-    background-position-x:34%;
-    height:420px;
-
+  
+  @media (min-width: 992px) {
+    .mastheadHeading {
+      font-size: 6rem;
+      font-weight: 600;
+    }
+    
+    .mastheadSubheading {
+      font-size: 5rem;
+      font-weight: 400;
+    }
+    
   }
 }
