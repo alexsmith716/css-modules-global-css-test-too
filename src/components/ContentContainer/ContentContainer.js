@@ -12,17 +12,21 @@ const ContentContainer = () => {
 
           <div className="container">
 
-            <h1 className={styles.mastheadHeading}>Midtern Election App 2018</h1>
+            <div className={styles.mastheadContent}>
 
-            <h2 className={styles.mastheadSubheading}>The Midterms are almost here!</h2>
+              <h1 className={styles.mastheadHeading}>Election App 2018</h1>
 
-            <div className={styles.mastheadBlurb}>What are you and others saying?</div>
+              <h2 className={styles.mastheadSubheading}>The Midterms are almost here!</h2>
 
-            <div className={styles.mastheadBlurbElipsis}>join the conversation.</div>
+              <div className={styles.mastheadBlurb}>What are you and others saying?</div>
 
-            <div className={styles.mastheadSignup}>
+              <div className={styles.mastheadBlurbElipsis}>... join the conversation.</div>
 
-              <a className="btn btn-primary btn-lg" role="button" href="#">Sign Up Now</a>
+              <div>
+
+                <a className="btn btn-primary btn-lg" role="button" href="#">Sign Up Now »</a>
+
+              </div>
 
             </div>
 
