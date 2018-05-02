@@ -7,6 +7,8 @@
 // 1rem equals the browser default root font-size (often 16px)
 // https://hackernoon.com/4-techniques-for-responsive-font-sizing-with-scss-f663791c62f0
 // http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+// $font-size-root: 16px;
+// 61px / 16px = 3.8125rem
 
 .masthead {
   padding-top: 90px;
@@ -27,6 +29,7 @@
     @include tester-font;
 
     .mastheadHeading {
+      // @include font-size(61px);
       font-size: 3.8rem;
       // font-size: 5rem;
       // font-size: calc(5rem/2);
