@@ -1,93 +1,96 @@
+// 600px 768px 992px 1200px
+// h1 { text-transform: lowercase; }
+// h1:first-letter { text-transform: uppercase; }
+// font-weight: 500;
+// Rem is relative to the root font-size
+// browser defaults root font-size to 16px
+// 1rem equals the browser default root font-size (often 16px)
+// https://hackernoon.com/4-techniques-for-responsive-font-sizing-with-scss-f663791c62f0
+// http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 
 .masthead {
-  padding-top: 30px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  // padding-right: 30px;
+  // padding-left: 30px;
   background-image: url('./img/splashImage-2048x719.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  height:550; 
   border-radius: 0 !important;
   background-position-x: 32%;
   @include background-cover;
 
-  padding-bottom: 50px;
+  .mastheadContent {
 
-  padding-right: 60px;
-  padding-left: 60px;
-
-  text-align: center;
-  @include colorDarkorange;
-  @include tester-font;
-
-  .mastheadHeading {
-    font-size: 5rem;
-    font-weight: 600;
-    @include colorDodgerblueFour;
-    @include tester-font3;
-  }
-
-  .mastheadSubheading {
-    font-size: 3rem;
-    @include colorCrimson;
-  }
-
-  .mastheadBlurb {
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-size: 2rem;
-    @include tester-font4;
-  }
-
-  .mastheadBlurbElipsis {
-    margin-left: 25px;
-    margin-bottom: 35px;
-    font-size: 2rem;
-    @include tester-font4;
-  }
-
-  .mastheadSignup {
     text-align: center;
-  }
-
-  @media (min-width: 768px) {
-
-    padding-top: 70px;
-    text-align: left;
+    @include colorDarkorange;
+    @include tester-font;
 
     .mastheadHeading {
-      font-size: 5rem;
+      font-size: 3.8rem;
+      // font-size: 5rem;
+      // font-size: calc(5rem/2);
+      // font-size: 2.5rem;
       font-weight: 600;
+      @include colorDodgerblueFour;
+      @include tester-font3;
     }
-    
+
     .mastheadSubheading {
-      font-size: 4rem;
-      font-weight: 500;
+      font-size: 2.0rem;
+      @include colorCrimson;
     }
-    
+
     .mastheadBlurb {
-      font-size: 3rem;
-      font-weight: 400;
-    }
-    
-    .mastheadBlurbElipsis {
-      font-size: 3rem;
-      font-weight: 400;
-    }
-    .mastheadSignup {
-      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+      @include tester-font4;
     }
 
-  }
-  
-  @media (min-width: 992px) {
-    .mastheadHeading {
-      font-size: 6rem;
-      font-weight: 600;
+    .mastheadBlurbElipsis {
+      margin-left: 25px;
+      margin-bottom: 35px;
+      font-size: 1.2rem;
+      @include tester-font4;
     }
-    
-    .mastheadSubheading {
-      font-size: 5rem;
-      font-weight: 400;
+
+    @media (min-width: 768px) {
+      text-align: left;
+
+      .mastheadHeading {
+        font-size: 4.1rem;
+      }
+
+      .mastheadSubheading {
+        font-size: 2.3rem;
+      }
+
+      .mastheadBlurb {
+        font-size: 1.4rem;
+      }
+
+      .mastheadBlurbElipsis {
+        font-size: 1.4rem;
+      }
     }
-    
+
+    @media (min-width: 992px) {
+      .mastheadHeading {
+        font-size: 4.7rem;
+      }
+
+      .mastheadSubheading {
+        font-size: 2.5rem;
+      }
+
+      .mastheadBlurb {
+        font-size: 1.6rem;
+      }
+
+      .mastheadBlurbElipsis {
+        font-size: 1.6rem;
+      }
+    }
   }
 }
