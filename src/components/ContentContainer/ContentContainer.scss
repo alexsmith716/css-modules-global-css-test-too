@@ -9,6 +9,13 @@
 // http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 // $font-size-root: 16px;
 // 61px / 16px = 3.8125rem
+// Below IS THE Bootstrap v4 "font-size-base":
+// $font-size-base: 1rem;
+// 16px == 1rem
+// 32px == 2rem
+// 64px == 4rem
+// 96px == 6rem
+// 112px == 7rem
 
 .masthead {
   padding-top: 90px;
@@ -29,11 +36,11 @@
     @include tester-font;
 
     .mastheadHeading {
-      @include font-size(81px);
-      // font-size: 3.8rem;
+      // @include font-size(64px);
       // font-size: 5rem;
       // font-size: calc(5rem/2);
       // font-size: 2.5rem;
+      font-size: 3.8rem;
       font-weight: 600;
       @include colorDodgerblueFour;
       @include tester-font3;
