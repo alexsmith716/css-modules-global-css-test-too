@@ -6,19 +6,19 @@ export default class App extends Component {
 
   render () {
 
-    const styles = require('./AppScss.scss');
-    const AppScss2 = require('./AppScss2.scss');
-    const AppCss = require('./AppCss.css');
-    // const iconBar30 = require('./svg/icon-bar-30.svg');
+    const stylesScss1 = require('./scss/AppScss1.scss');
+    const stylesScss2 = require('./scss/AppScss2.scss');
+    const stylesCss1 = require('./css/AppCss1.css');
+    // const iconBar30 = require('./img/icon-bar-30.svg');
     // <img src={iconBar30} width="30" height="30" alt=""/>
     // <span className="navbar-toggler-icon"></span>
-    // <span className={`fa fa-bars ${styles.faBars}`}></span>
+    // <span className={`fa fa-bars ${stylesScss1.faBars}`}></span>
 
     return (
-      <div className={styles.app}>
+      <div className={stylesScss1.app}>
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-          <a className={`navbar-brand ${styles.brand}`} href="#">Election App</a>
+          <a className={`navbar-brand ${stylesScss1.brand}`} href="#">Election App</a>
           <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -32,7 +32,7 @@ export default class App extends Component {
                   <i className="fa fa-fw fa-sign-in"></i>Modal</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#"><span className={`fa fa-headphones ${AppScss2.colorGoldLocal}`}></span><span className={AppScss2.colorGoldLocal}>Headphones!</span></a>
+                <a className="nav-link" href="#"><span className={`fa fa-headphones ${stylesScss2.colorGoldLocal}`}></span><span className={stylesScss2.colorGoldLocal}>Headphones!</span></a>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -51,15 +51,15 @@ export default class App extends Component {
         </nav>
 
 
-        <div className={styles.appContent}>
+        <div className={stylesScss1.appContent}>
           <ContentContainer />
         </div>
 
 
-        <footer className={`py-5 ${styles.footer}`}>
+        <footer className={`py-5 ${stylesScss1.footer}`}>
           <div className="container">
-            <p className={`m-0 text-center ${AppCss.colorCrimsonCssLocal}`}>Copyright &copy; 2018 · Election App 2018!</p>
-            <p className="m-0 text-center"><span className={`fa fa-headphones ${AppScss2.colorGoldLocal}`}></span><span className={AppScss2.colorGoldLocal}>Footer Headphones!</span></p>
+            <p className={`m-0 text-center ${stylesCss1.colorCrimsonCssLocal}`}>Copyright &copy; 2018 · Election App 2018!</p>
+            <p className="m-0 text-center"><span className={`fa fa-headphones ${stylesScss2.colorGoldLocal}`}></span><span className={stylesScss2.colorGoldLocal}>Footer Headphones!</span></p>
           </div>
         </footer>
 
@@ -91,7 +91,7 @@ export default class App extends Component {
 
                 <p className="sourcesansproRegularWebfontFont">This paragraph's '@font-face' is 'sourcesanspro-regular-webfont'.</p>
 
-                <p className={`colorDarkgrayGlobal ${AppScss2.firaSansBookItalicFontGlobalToLocal}`}>This paragraph's '@font-face' is 'FiraSans-BookItalic'. It is scoped Global to Local.</p>
+                <p className={`colorDarkgrayGlobal ${stylesScss2.firaSansBookItalicFontGlobalToLocal}`}>This paragraph's '@font-face' is 'FiraSans-BookItalic'. It is scoped Global to Local.</p>
 
                 <p className="colorOrangeredGlobal firaSansBookItalicFont">This paragraph's '@font-face' is 'FiraSans-BookItalic' It is scoped Global.</p>
 

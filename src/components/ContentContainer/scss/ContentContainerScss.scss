@@ -22,20 +22,20 @@
   padding-bottom: 90px;
   // padding-right: 30px;
   // padding-left: 30px;
-  background-image: url('./img/splashImage-2048x719.jpg');
+  background-image: url('../img/splashImage-2048x719.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 0 !important;
   background-position-x: 32%;
   @include background-cover;
 
-  .mastheadContent {
+  .content {
 
     text-align: center;
     @include colorDarkorange;
     @include tester-font;
 
-    .mastheadHeading {
+    .heading {
       // @include font-size(64px);
       // font-size: 5rem;
       // font-size: calc(5rem/2);
@@ -46,19 +46,19 @@
       @include tester-font3;
     }
 
-    .mastheadSubheading {
+    .subheading {
       font-size: 2.0rem;
       @include colorCrimson;
     }
 
-    .mastheadBlurb {
+    .blurb {
       margin-top: 20px;
       margin-bottom: 5px;
       font-size: 1.2rem;
       @include tester-font4;
     }
 
-    .mastheadBlurbElipsis {
+    .blurbElipsis {
       margin-left: 25px;
       margin-bottom: 35px;
       font-size: 1.2rem;
@@ -68,37 +68,37 @@
     @media (min-width: 768px) {
       text-align: left;
 
-      .mastheadHeading {
+      .heading {
         font-size: 4.1rem;
       }
 
-      .mastheadSubheading {
+      .subheading {
         font-size: 2.3rem;
       }
 
-      .mastheadBlurb {
+      .blurb {
         font-size: 1.4rem;
       }
 
-      .mastheadBlurbElipsis {
+      .blurbElipsis {
         font-size: 1.4rem;
       }
     }
 
     @media (min-width: 992px) {
-      .mastheadHeading {
+      .heading {
         font-size: 4.7rem;
       }
 
-      .mastheadSubheading {
+      .subheading {
         font-size: 2.5rem;
       }
 
-      .mastheadBlurb {
+      .blurb {
         font-size: 1.6rem;
       }
 
-      .mastheadBlurbElipsis {
+      .blurbElipsis {
         font-size: 1.6rem;
       }
     }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContentContainer = () => {
 
-  const styles = require('./ContentContainer.scss');
+  const styles = require('./scss/ContentContainerScss.scss');
 
   return (
 
@@ -12,15 +12,15 @@ const ContentContainer = () => {
 
           <div className="container">
 
-            <div className={styles.mastheadContent}>
+            <div className={styles.content}>
 
-              <h1 className={styles.mastheadHeading}>Election App 2018</h1>
+              <h1 className={styles.heading}>Election App 2018</h1>
 
-              <h2 className={styles.mastheadSubheading}>The Midterms are almost here!</h2>
+              <h2 className={styles.subheading}>The Midterms are almost here!</h2>
 
-              <div className={styles.mastheadBlurb}>What are you and others saying?</div>
+              <div className={styles.blurb}>What are you and others saying?</div>
 
-              <div className={styles.mastheadBlurbElipsis}>... join the conversation.</div>
+              <div className={styles.blurbElipsis}>... join the conversation.</div>
 
               <div>
 
