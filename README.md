@@ -1,11 +1,17 @@
 # css-modules-global-css-test-too
 
 ### Overview:
-Testing css modules and global scope. Toooo.
+Testing css modules and global scope. Best practice to avoid global variables from polluting the global namespace is to controll the scoping of all varialbles to either local or global. For example, locally scoped css receives a unique local identifier 'localIdentName'. This identifier is added at 'css-loader. The unique identifier prevents selectors from clashing so thereby enabling controlled, efficient use of styles throught an app.
 
 
 ### Issue 1:
 Encountered issue apparently caused by nested ":global" switches.
+
+Files:
+
+`package.json > scripts > build:breaks:globalswitch`
+
+`./webpack/webpack.config.prod.breaks.js`
 
 Appears Error is thrown by [**postcss-modules-local-by-default**](https://github.com/css-modules/postcss-modules-local-by-default/blob/master/index.js#L26).
 
@@ -51,6 +57,12 @@ Module build failed: Missing whitespace before :global (357:4)`
 ### Issue 2:
 Beware !!!!! Switching off the default local scoped CSS with the ":global" switch will cause failure of "@font-face" in css.
 
+Files:
+
+`package.json > scripts > build:tester`
+
+`./webpack/webpack.config.prod.tester.js`
+
 When the custom font rule "@font-face {}" is added to ":global {}" selector scope it receives the enclosing curly braces from the  ":global {}" block. 
 
 Took me many wasted hours to discover what was going on !!!!!!!
@@ -80,6 +92,21 @@ Failed custom "@font-face" below:
 1) [**Bootstrap-Loader**](https://github.com/shakacode/bootstrap-loader)
 
 
-### Comments:
+### Issue 3:
+Not an exactly an issue or breaking error, but 
 
-https://webpack.js.org/guides/shimming/
+
+Files:
+
+`package.json > scripts > build:works:includeexclude`
+
+`./webpack/webpack.config.prod.works.ie.js`
+
+
+
+https://forum.shakacode.com/t/best-practices-for-css-and-css-modules-using-webpack/799
+
+
+
+
+

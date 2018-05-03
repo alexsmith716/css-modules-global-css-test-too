@@ -72,24 +72,32 @@ module.exports = {
   //     minSize: 0,
   //   },
   //   occurrenceOrder: true,
-  //   // minimize: true,
-  //   // minimizer: [
-  //   //   new UglifyJsPlugin({
-  //   //     sourceMap: true,
-  //   //     uglifyOptions: {
-  //   //       compress: {
-  //   //         warnings: true,
-  //   //         drop_console: true,
-  //   //       },
-  //   //       mangle: false,
-  //   //       output: {
-  //   //         beautify: true,
-  //   //         comments: false
-  //   //       },
-  //   //       warnings: true
-  //   //     }
-  //   //   })
-  //   // ]
+  //   minimize: true,
+  //   minimizer: [
+  //     new UglifyJsPlugin({
+  //       sourceMap: true,
+  //       uglifyOptions: {
+  //         ecma: 8,
+  //         warnings: false,
+  //         compress: {
+  //           warnings: false,
+  //           drop_console: true,
+  //         },
+  //         mangle: false,
+  //         output: {
+  //           beautify: false,
+  //           comments: false
+  //         },
+  //         
+  //         toplevel: false,
+  //         nameCache: null,
+  //         ie8: false,
+  //         keep_classnames: undefined,
+  //         keep_fnames: false,
+  //         safari10: false,
+  //       }
+  //     })
+  //   ]
   // },
 
   module: {
@@ -234,14 +242,14 @@ module.exports = {
 
     new ExtractTextPlugin({
       filename: '[name].css',
+      // filename: '[name].[contenthash].css',
       // disable: false, 
-      allChunks: true
+      // allChunks: true
     }),
 
     // new MiniCssExtractPlugin({
-    //   filename: '[name].css',
-    //   //filename: '[name].[hash].css',
-    //   //chunkFilename: '[id].[hash].css'
+    //  filename: '[name].css',
+    //  // filename: '[name].[contenthash].css'
     // }),
 
     new HtmlWebpackPlugin({
