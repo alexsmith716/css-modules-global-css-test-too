@@ -77,23 +77,23 @@ export default class App extends Component {
 
                 <p>Modal is working. This paragraph's font and the above modal-title's font is 'Old English'. It is the default 'global' font for this app. It is overriding Bootstrap's default font 'font-family-sans-serif'. It's a hard to read font but easily recognizable for development purposes.</p>
 
-                <p className="allerLightFont">This paragraph's '@font-face' is 'aller-light'.</p>
+                <p className="robotoMonoV4LatinRegularFont">This paragraph's '@font-face' is 'roboto-mono-v4-latin-regular'.</p>
 
                 <p className="bootstrapDefaultFont colorSalmonGlobal">This paragraph's '@font-face' is 'font-family-sans-serif'.</p>
 
-                <p className="firaMonoRegularFont">This paragraph's '@font-face' is 'FiraMono-Regular'.</p>
+                <p className="lobsterv20latinregularFont">This paragraph's '@font-face' is 'lobster-v20-latin-regular'.</p>
 
                 <p className="norwesterFont">This paragraph's '@font-face' is 'norwester'.</p>
 
-                <p className="openSansLightFont colorCrimsonGlobal">This paragraph's '@font-face' is 'OpenSans-Light'.</p>
+                <p className="colorCrimsonGlobal openSansItalicwebfontFont">This paragraph's '@font-face' is 'OpenSans-Italic-webfont'.</p>
 
-                <p className="scadaRegularFont">This paragraph's '@font-face' is 'Scada-Regular'.</p>
+                <p className="philosopherboldwebfontFont">This paragraph's '@font-face' is 'philosopher-bold-webfont'.</p>
 
-                <p className="sourcesansproRegularWebfontFont">This paragraph's '@font-face' is 'sourcesanspro-regular-webfont'.</p>
+                <p className="sourcesansproregularwebfontFont">This paragraph's '@font-face' is 'sourcesanspro-regular-webfont'.</p>
 
-                <p className={`colorDarkgrayGlobal ${stylesScss2.firaSansBookItalicFontGlobalToLocal}`}>This paragraph's '@font-face' is 'FiraSans-BookItalic'. It is scoped Global to Local.</p>
+                <p className={`colorDarkgrayGlobal ${stylesScss2.montserratLightFontGlobalToLocal}`}>This paragraph's '@font-face' is 'MontserratLight'. It is scoped Global to Local.</p>
 
-                <p className="colorOrangeredGlobal firaSansBookItalicFont">This paragraph's '@font-face' is 'FiraSans-BookItalic' It is scoped Global.</p>
+                <p className="colorOrangeredGlobal openSansBoldwebfontFont">This paragraph's '@font-face' is 'OpenSans-Bold-webfont' It is scoped Global.</p>
 
               </div>
               <div className="modal-footer">

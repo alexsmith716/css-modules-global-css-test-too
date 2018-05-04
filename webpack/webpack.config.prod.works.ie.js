@@ -9,6 +9,15 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const rootPath = path.resolve(__dirname, '..');
 const assetsPath = path.resolve(rootPath, './dist');
 
+// https://nodejs.org/api/modules.html#modules_folders_as_modules
+
+// 'entry > vendor' >>>> entry point to that library
+// Folders as Modules:
+// folder ('bootstrap') passed to require() as an argument
+// folder ('react-dom') passed to require() as an argument
+
+// look up single entry point in webpack
+
 module.exports = {
 
   devtool: 'source-map',
@@ -17,16 +26,16 @@ module.exports = {
 
   entry: {
     main: [
-      'babel-polyfill',
       './src/assets/scss/theme/theme.scss',
       './src/index.js'
     ],
     vendor: [
       'react',
       'react-dom',
-      'jquery',
-      'popper.js',
-      'bootstrap',
+      'jquery',       // './node_modules/jquery/package.json'    > "main": "dist/jquery.js",
+      'popper.js',    // './node_modules/popper.js/package.json' > "main": "dist/umd/popper.js",
+      'bootstrap', // './node_modules/bootstrap/package.json' > "main": "dist/js/bootstrap.js"
+      // './src/assets/scss/bootstrap/customizations/customizedScripts.js',
     ],
   },
 
@@ -42,13 +51,13 @@ module.exports = {
     // chunkFilename: '[name].[chunkhash].js',
   },
 
-  // optimization: {
-  //   splitChunks: {
-  //     automaticNameDelimiter: "-",
-  //     chunks: 'all',
-  //     minSize: 0,
-  //   },
-  // },
+  optimization: {
+    splitChunks: {
+      automaticNameDelimiter: "-",
+      chunks: 'all',
+      minSize: 0,
+    },
+  },
 
   // optimization: {
   //   splitChunks: {
@@ -96,6 +105,7 @@ module.exports = {
 
     rules: [
       {
+        // test: /\.jsx?$/,
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: [
@@ -210,7 +220,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: [ '.js', '.jsx', '.json' ],
   },
 
   plugins: [
