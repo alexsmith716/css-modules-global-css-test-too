@@ -22,7 +22,6 @@ module.exports = {
 
   entry: {
     main: [
-      'babel-polyfill',
       'bootstrap-loader',
       './src/index.js'
     ],

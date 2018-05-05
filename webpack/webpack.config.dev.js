@@ -15,7 +15,6 @@ module.exports = {
 
   entry: {
     main: [
-      'babel-polyfill',
       './src/assets/scss/global/global.scss',
       './src/index.js',
     ],

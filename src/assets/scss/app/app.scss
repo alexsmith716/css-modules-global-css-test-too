@@ -31,20 +31,20 @@ hr.light {
 // --------------------------------------------------------------------------------
 
 
-.allerLightFont {
-  @include aller-light-font;
+.montserratLightFont {
+  @include montserratlight-font;
 }
 
 .bootstrapDefaultFont {
   @include bootstrap-default-font;
 }
 
-.firaSansBookItalicFont {
-  @include firasans-bookitalic-font;
+.openSansBoldwebfontFont {
+  @include opensans-bold-webfont-font;
 }
 
-.firaMonoRegularFont {
-  @include firamono-regular-font;
+.openSansItalicwebfontFont {
+  @include opensans-italic-webfont-font;
 }
 
 .norwesterFont {
@@ -55,16 +55,20 @@ hr.light {
   @include old-english-font;
 }
 
-.openSansLightFont {
-  @include opensans-light-font;
+.philosopherboldwebfontFont {
+  @include philosopher-bold-webfont-font;
 }
 
-.scadaRegularFont {
-  @include scada-regular-font;
+.lobsterv20latinregularFont {
+  @include lobster-v20-latin-regular-font;
 }
 
-.sourcesansproRegularWebfontFont {
+.sourcesansproregularwebfontFont {
   @include sourcesanspro-regular-webfont-font;
+}
+
+.robotoMonoV4LatinRegularFont {
+  @include roboto-mono-v4-latin-regular-font;
 }
 
 // --------------------------------------------------------------------------------

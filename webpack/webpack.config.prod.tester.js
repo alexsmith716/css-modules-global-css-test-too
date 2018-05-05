@@ -17,7 +17,6 @@ module.exports = {
 
   entry: {
     main: [
-      'babel-polyfill',
       // 'font-awesome/scss/font-awesome.scss',
        './src/assets/scss/global/global2.scss',
       './src/index.js'

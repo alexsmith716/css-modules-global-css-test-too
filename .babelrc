@@ -1,8 +1,29 @@
 {
   "presets": [
     "react",
-    ["env"],
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "IE >= 8"],
+          "node": "current"
+        },
+        "useBuiltIns": "entry"
+      }
+    ],
     "stage-0"
   ],
   "plugins": []
 }
+
+// https://github.com/babel/babel/tree/master/packages/babel-preset-env
+
+// useBuiltIns: 'entry'
+// 
+//     NOTE: Only use require("@babel/polyfill"); once in your whole app. 
+//     Multiple imports or requires of @babel/polyfill will throw an error 
+//     since it can cause global collisions and other issues that are hard to trace. 
+//     We recommend creating a single entry file that only contains the require statement.
+// 
+// This option enables a new plugin that replaces the statement import "@babel/polyfill" 
+// or require("@babel/polyfill") with individual requires for @babel/polyfill based on environment.

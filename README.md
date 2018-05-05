@@ -93,7 +93,7 @@ Failed custom "@font-face" below:
 
 
 ### Issue 3:
-Not an exactly an issue or breaking error, but 
+Still looking over this approach to CSS Modules. It makes use of module rule 'exclude' to avoid localized modules.
 
 
 Files:
