@@ -5,8 +5,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const devMode = process.env.NODE_ENV !== 'production';
 
 const rootPath = path.resolve(__dirname, '..');
 const assetsPath = path.resolve(rootPath, './dist');
@@ -33,23 +34,31 @@ module.exports = {
 
   output: {
     // path: __dirname,
-    filename: '[name].js',
+    // filename: '[name].js',
     // publicPath: '/',
     // path: path.resolve(__dirname, '../public/assets'),
     // // the target directory for all output files - absolute path
     // publicPath: '/assets/',
     // // the url to the output directory resolved relative to the HTML page
-    // filename: '[name].[hash].js',
-    // chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[chunkhash].js',
   },
 
-  // optimization: {
-  //   splitChunks: {
-  //     automaticNameDelimiter: "-",
-  //     chunks: 'all',
-  //     minSize: 0,
-  //   },
-  // },
+  optimization: {
+    splitChunks: {
+      automaticNameDelimiter: "-",
+      chunks: 'all',
+      minSize: 0,
+    },
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
 
   // optimization: {
   //   splitChunks: {
@@ -240,10 +249,10 @@ module.exports = {
     }),
 
     new ExtractTextPlugin({
-      filename: '[name].css',
-      // filename: '[name].[contenthash].css',
-      // disable: false, 
-      // allChunks: true
+      // filename: '[name].css',
+      filename: '[name].[id].css',
+      disable: false, 
+      allChunks: true
     }),
 
     // new MiniCssExtractPlugin({

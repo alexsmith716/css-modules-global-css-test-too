@@ -6,6 +6,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+const devMode = process.env.NODE_ENV !== 'production';
+
 const rootPath = path.resolve(__dirname, '..');
 const assetsPath = path.resolve(rootPath, './dist');
 
@@ -30,8 +32,8 @@ module.exports = {
       './src/index.js'
     ],
     vendor: [
-      'react',
-      'react-dom',
+      //'react',
+      //'react-dom',
       'jquery',       // './node_modules/jquery/package.json'    > "main": "dist/jquery.js",
       'popper.js',    // './node_modules/popper.js/package.json' > "main": "dist/umd/popper.js",
       'bootstrap', // './node_modules/bootstrap/package.json' > "main": "dist/js/bootstrap.js"
@@ -41,14 +43,14 @@ module.exports = {
 
   output: {
     // path: __dirname,
-    filename: '[name].js',
+    // filename: '[name].js',
     // publicPath: '/',
     // path: path.resolve(__dirname, '../public/assets'),
     // // the target directory for all output files - absolute path
     // publicPath: '/assets/',
     // // the url to the output directory resolved relative to the HTML page
-    // filename: '[name].[hash].js',
-    // chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[chunkhash].js',
   },
 
   optimization: {
@@ -57,6 +59,14 @@ module.exports = {
       chunks: 'all',
       minSize: 0,
     },
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
   },
 
   // optimization: {
@@ -248,9 +258,11 @@ module.exports = {
     // new webpack.NamedModulesPlugin(),
 
     new MiniCssExtractPlugin({
+      // filename: '[name].css',
+      // filename: '[name].[hash].css',
+      // chunkFilename: '[id].[hash].css',
       filename: '[name].css',
-      //filename: '[name].[hash].css',
-      //chunkFilename: '[id].[hash].css'
+      chunkFilename: '[id].css',
     }),
 
   ],
