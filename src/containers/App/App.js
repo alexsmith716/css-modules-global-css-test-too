@@ -59,7 +59,7 @@ export default class App extends Component {
         <footer className={`py-5 ${stylesScss1.footer}`}>
           <div className="container">
             <p className={`m-0 text-center ${stylesCss1.colorCrimsonCssLocal}`}>Copyright &copy; 2018 · Election App 2018!</p>
-            <p className="m-0 text-center"><span className={`fa fa-headphones ${stylesScss2.colorGoldLocal}`}></span><span className={stylesScss2.colorGoldLocal}>Footer Headphones!</span></p>
+            <p className="m-0 text-center"><span className={`fa fa-headphones ${stylesScss2.colorGoldLocal}`}></span><span className={`norwesterFont ${stylesScss2.colorGoldLocal}`}>Footer Headphones!</span></p>
           </div>
         </footer>
 

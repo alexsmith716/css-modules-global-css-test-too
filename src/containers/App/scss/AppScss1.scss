@@ -12,18 +12,17 @@
 }
 
 .appContent {
-  // padding-top: 3.5rem;
-  padding-top: 56px;
+  padding-top: calculate-rem(56px);
   position: relative;
 }
 
 .faBars {
   // transform: scale(1.5, 1.5);
-  // font-size: 28;
+  // @include font-size(28px);
 }
 
 .footer {
-  background: #A1A1A1;
+  background: #473C8B; // slateblue 4: #473C8B
 }
 
 // :global() {

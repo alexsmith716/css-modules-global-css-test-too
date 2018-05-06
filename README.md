@@ -3,6 +3,10 @@
 ### Overview:
 Testing css modules and global scope. Best practice to avoid global variables from polluting the global namespace is to controll the scoping of all varialbles to either local or global. For example, locally scoped css receives a unique local identifier 'localIdentName'. This identifier is added at 'css-loader. The unique identifier prevents selectors from clashing so thereby enabling controlled, efficient use of styles throught an app.
 
+Something to note, not using a global theming library like Bootstrap requires fundamantal scss changes. That would be an interesting tester app to build out.
+
+Hmmmm, so scss works like somewhat like Pug (variables, functions, conditionals ...).
+
 
 ### Issue 1:
 Encountered issue apparently caused by nested ":global" switches.

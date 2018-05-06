@@ -18,89 +18,85 @@
 // 112px == 7rem
 
 .masthead {
-  padding-top: 90px;
-  padding-bottom: 90px;
-  // padding-right: 30px;
-  // padding-left: 30px;
-  background-image: url('../img/splashImage-2048x719.jpg');
+  padding-top: calculate-rem(65px);
+  padding-bottom: calculate-rem(90px);
+  background-color: #eeeeee;
+  background: url('../img/splashImage-2048x719.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  border-radius: 0 !important;
   background-position-x: 32%;
   @include background-cover;
 
-  .content {
+  text-align: center;
+  @include colorDarkorange;
+  @include tester-font;
 
-    text-align: center;
-    @include colorDarkorange;
-    @include tester-font;
+  h1 {
+    // @include font-size(61px);
+    // font-size: 5rem;
+    // font-size: calc(5rem/2);
+    // font-size: 2.5rem;
+    font-size: 3.8rem;
+    font-weight: 600;
+    @include colorDodgerblueFour;
+    @include tester-font3;
+  }
 
-    .heading {
-      // @include font-size(64px);
-      // font-size: 5rem;
-      // font-size: calc(5rem/2);
-      // font-size: 2.5rem;
-      font-size: 3.8rem;
-      font-weight: 600;
-      @include colorDodgerblueFour;
-      @include tester-font3;
+  h2 {
+    font-size: 2.0rem;
+    @include colorCrimson;
+  }
+
+  .blurb {
+    margin-top: calculate-rem(20px);
+    margin-bottom: calculate-rem(5px);
+    font-size: 1.2rem;
+    @include tester-font4;
+  }
+
+  .blurbElipsis {
+    margin-left: calculate-rem(25px);
+    margin-bottom: calculate-rem(35px);
+    font-size: 1.2rem;
+    @include tester-font4;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+
+    h1 {
+      font-size: 4.1rem;
     }
 
-    .subheading {
-      font-size: 2.0rem;
-      @include colorCrimson;
+    h2 {
+      font-size: 2.3rem;
     }
 
     .blurb {
-      margin-top: 20px;
-      margin-bottom: 5px;
-      font-size: 1.2rem;
-      @include tester-font4;
+      font-size: 1.4rem;
     }
 
     .blurbElipsis {
-      margin-left: 25px;
-      margin-bottom: 35px;
-      font-size: 1.2rem;
-      @include tester-font4;
-    }
-
-    @media (min-width: 768px) {
-      text-align: left;
-
-      .heading {
-        font-size: 4.1rem;
-      }
-
-      .subheading {
-        font-size: 2.3rem;
-      }
-
-      .blurb {
-        font-size: 1.4rem;
-      }
-
-      .blurbElipsis {
-        font-size: 1.4rem;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .heading {
-        font-size: 4.7rem;
-      }
-
-      .subheading {
-        font-size: 2.5rem;
-      }
-
-      .blurb {
-        font-size: 1.6rem;
-      }
-
-      .blurbElipsis {
-        font-size: 1.6rem;
-      }
+      font-size: 1.4rem;
     }
   }
+
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 4.7rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .blurb {
+      font-size: 1.6rem;
+    }
+
+    .blurbElipsis {
+      font-size: 1.6rem;
+    }
+  }
+
 }
