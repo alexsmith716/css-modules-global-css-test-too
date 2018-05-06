@@ -3,7 +3,32 @@
 // CALCULATE AND RETURN PIXEL TO REM
 // --------------------------------------------------------------------------------
 
+@function test-number-px($testSize) {
+
+  @if (type-of($testSize) == number) {
+
+    @if (unit($testSize) != "px") {
+
+      @error "`#{$testSize}` needs to be a pixel value. <<<<<<<<<<<<< SCSS ERROR <<<<<<<<<<<<<";
+
+    }
+
+  } @else {
+
+    @error "`#{$testSize}` needs to be a number. <<<<<<<<<<<<< SCSS ERROR <<<<<<<<<<<<<";
+
+  }
+
+  @return $testSize;
+
+}
+
 @function calculate-rem($size) {
-  $remSize: $size / 16px;
+
+  $testedSize: test-number-px($size);
+
+  $remSize: $testedSize / $base-font-pixel-size;
+
   @return #{$remSize}rem;
+
 }

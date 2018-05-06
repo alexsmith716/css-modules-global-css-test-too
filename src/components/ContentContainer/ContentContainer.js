@@ -12,21 +12,17 @@ const ContentContainer = () => {
 
           <div className="container">
 
-            <div className={styles.content}>
+            <h1>Election App 2018</h1>
 
-              <h1 className={styles.heading}>Election App 2018</h1>
+            <h2>The Midterms are almost here!</h2>
 
-              <h2 className={styles.subheading}>The Midterms are almost here!</h2>
+            <div className={styles.blurb}>What are you and others saying?</div>
 
-              <div className={styles.blurb}>What are you and others saying?</div>
+            <div className={styles.blurbElipsis}>... join the conversation.</div>
 
-              <div className={styles.blurbElipsis}>... join the conversation.</div>
+            <div>
 
-              <div>
-
-                <a className="btn btn-primary btn-lg" role="button" href="#">Sign Up Now »</a>
-
-              </div>
+              <a className="btn btn-primary btn-lg" role="button" href="#">Sign Up Now »</a>
 
             </div>
 
@@ -34,32 +30,51 @@ const ContentContainer = () => {
 
         </header>
 
+
+
         <div className="container">
 
           <div className="row">
 
-            <div className="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-              <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <div className="col-lg-4">
+              <div className="card">
+                <h4 className="card-header">Card Title 1</h4>
+                <div className="card-body">
+                  <p className="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                </div>
+                <div className="card-footer">
+                  <a href="#" className="btn btn-secondary">View details »</a>
+                </div>
+              </div>
             </div>
 
-            <div className="col-md-4">
-              <h2>Heading</h2>
-              <p className="colorPurpleGlobal">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-              <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <div className="col-lg-4">
+              <div className="card">
+                <h4 className="card-header">Card Title 2</h4>
+                <div className="card-body">
+                  <p className="card-text colorPurpleGlobal">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                </div>
+                <div className="card-footer">
+                  <a href="#" className="btn btn-secondary">View details »</a>
+                </div>
+              </div>
             </div>
 
-            <div className="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <div className="col-lg-4">
+              <div className="card">
+                <h4 className="card-header">Card Title 3</h4>
+                <div className="card-body">
+                  <p className="card-text">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus.</p>
+                </div>
+                <div className="card-footer">
+                  <a href="#" className="btn btn-secondary">View details »</a>
+                </div>
+              </div>
             </div>
 
           </div>
 
         </div>
-
 
     </div>
 

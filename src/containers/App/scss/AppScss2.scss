@@ -1,8 +1,8 @@
 
 .colorMarginStyleLocal {
-  margin-top: 30px;
+  margin-top: calculate-rem(30px);
   color: #5c6ac4;
-  border: 3px solid #5c6ac4;
+  border: calculate-rem(3px) solid #5c6ac4;
 }
 
 .colorGoldLocal {
@@ -18,7 +18,7 @@
 }
 
 .coloredText3Local {
-  font-size: 20px;
+  @include font-size(20px);
   color: #00CD00;
 }
 
